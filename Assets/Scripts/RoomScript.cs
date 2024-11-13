@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using PlayerScript;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomScript : MonoBehaviour
 {
@@ -8,10 +9,15 @@ public class RoomScript : MonoBehaviour
     public bool roomToRight;
     public bool roomToTop;
     public bool roomToBottom;
-    public GameObject doorLeft;
-    public GameObject doorRight;
-    public GameObject doorUp;
-    public GameObject doorDown;
+    public bool isStartingRoom;
+    public bool spawnedEnemies;
+    public bool visited = false;
+    public LevelGenerator.RoomTypes roomType;
+    public Tuple<int,int> pos = new Tuple<int, int>(0,0);
+    public GameObject leftDoor;
+    public GameObject rightDoor;
+    public GameObject topDoor;
+    public GameObject bottomDoor;
     public GameObject leftWall1;
     public GameObject leftWall2;
     public GameObject rightWall1;
@@ -20,9 +26,12 @@ public class RoomScript : MonoBehaviour
     public GameObject topWall2;
     public GameObject bottomWall1;
     public GameObject bottomWall2;
+    public GameObject EnemySpawner;
+    public Color activeRoomColor;
+    public Color inactiveRoomColor;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         if(!roomToLeft)
         {
@@ -52,11 +61,70 @@ public class RoomScript : MonoBehaviour
             newPosition.x = 0;
             bottomWall1.transform.localPosition = newPosition;
         }
+
+        leftDoor.SetActive(false);
+        rightDoor.SetActive(false);
+        topDoor.SetActive(false);
+        bottomDoor.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LockRoom()
     {
+        spawnedEnemies = true;
         
+        if (roomToLeft) { leftDoor.SetActive(true); }
+        if (roomToRight) { rightDoor.SetActive(true); }
+        if (roomToTop) { topDoor.SetActive(true); }
+        if (roomToBottom) { bottomDoor.SetActive(true); }
+
+        GameObject spawner = Instantiate(EnemySpawner);
+        EnemySpawnerScript script = spawner.GetComponent<EnemySpawnerScript>();
+
+        script.rs = this;
+    }
+
+    // Only happens after the player beats the room
+    public void UnlockRoom()
+    {
+        leftDoor.SetActive(false);
+        rightDoor.SetActive(false);
+        topDoor.SetActive(false);
+        bottomDoor.SetActive(false);
+        
+        // TODO: Spawn keys if a spawn room
+        switch (roomType)
+        {
+            case LevelGenerator.RoomTypes.RedSpawn:
+                Instantiate(LevelGenerator.staticKeys[0], gameObject.transform);
+                break;
+            case LevelGenerator.RoomTypes.YellowSpawn:
+                Instantiate(LevelGenerator.staticKeys[1], gameObject.transform);
+                break;
+            case LevelGenerator.RoomTypes.GreenSpawn:
+                Instantiate(LevelGenerator.staticKeys[2], gameObject.transform);
+                break;
+            case LevelGenerator.RoomTypes.BlueSpawn:
+                Instantiate(LevelGenerator.staticKeys[3], gameObject.transform);
+                break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.gameObject.CompareTag("PlayerRoomCollider")) return;
+        
+        if (!visited)
+        {
+            visited = true;
+            MapScript.NewRoomVisited(pos, roomType);
+        }
+        MapScript.roomDictionary[PlayerController.currentRoom].GetComponent<Image>().color = activeRoomColor;
+        MapScript.roomDictionary[pos].GetComponent<Image>().color = inactiveRoomColor;
+        PlayerController.currentRoom = pos;
+
+        if (!isStartingRoom && !spawnedEnemies)
+        {
+            LockRoom();
+        }
     }
 }
