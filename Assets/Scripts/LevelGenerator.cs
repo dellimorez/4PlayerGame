@@ -75,7 +75,6 @@ public class LevelGenerator : MonoBehaviour
         // Get left most room
         Tuple<int, int> leftMostRoom = getLeftMostRoom();
         gameBoard[leftMostRoom.Item1 - 1, leftMostRoom.Item2] = RoomTypes.Boss;
-        Debug.Log(leftMostRoom);
 
         // Create room prefabs at each area
         for(int i = 0; i < boardSize; i++)
@@ -92,7 +91,6 @@ public class LevelGenerator : MonoBehaviour
                 else if (gameBoard[i,j] == RoomTypes.Boss)
                 {
                     newRoom = Instantiate(roomPrefabs[(int)RoomTypes.Boss - 1]);
-                    Debug.Log("Created boss room");
                 }
                 else
                 {

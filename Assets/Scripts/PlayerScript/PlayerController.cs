@@ -11,6 +11,7 @@ namespace PlayerScript
         public static Vector2 playerPosition = Vector2.zero;
         public static Tuple<int, int> currentRoom;
         public static bool[] keysCollected;
+        public static bool inCombat = false;
 
         private Vector2 movement;
         private Rigidbody2D rb;

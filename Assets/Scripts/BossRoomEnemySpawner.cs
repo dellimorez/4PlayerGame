@@ -1,3 +1,4 @@
+using PlayerScript;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class BossRoomEnemySpawner : EnemySpawnerScript
     // Start is called before the first frame update
     override protected void Start()
     {
+        PlayerController.inCombat = true;
+
         if (EnemyPrefabs.Length == 0) { return; }
         enemies = new GameObject[numEnemies];
 

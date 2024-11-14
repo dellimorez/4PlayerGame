@@ -30,7 +30,7 @@ public class BossRoomScript : RoomScript
     // Only happens after the player beats the room
     override public void UnlockRoom()
     {
-        leftDoor.SetActive(false);
+        leftDoor.SetActive(true);
         rightDoor.SetActive(false);
 
         // TODO: End game
