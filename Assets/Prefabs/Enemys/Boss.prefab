@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1386927076809654482}
   - component: {fileID: 4034015257561422129}
-  - component: {fileID: 4978670887675822500}
+  - component: {fileID: 8140382304219685221}
   - component: {fileID: 8250579329223590016}
   - component: {fileID: 1883068283871128659}
-  m_Layer: 6
-  m_Name: Bat
+  m_Layer: 7
+  m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.24956924, g: 0.2513152, b: 0.5207547, a: 1}
+  m_Color: {r: 0.92830193, g: 0.34320757, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4978670887675822500
+--- !u!114 &8140382304219685221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,16 +96,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3457878598069653863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc61fea36fe32484c88022ce7189a31e, type: 3}
+  m_Script: {fileID: 11500000, guid: abf640ca9544ce24982c8e6f751a5241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 215
-  health: 1
-  strength: 1
+  speed: 100
+  health: 15
+  strength: 2
+  maxEnemyCount: 1
   movement: {x: 0, y: 0}
   rb: {fileID: 0}
-  timeToCircle: 3
-  circleRadius: 4
 --- !u!50 &8250579329223590016
 Rigidbody2D:
   serializedVersion: 4
@@ -145,10 +144,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

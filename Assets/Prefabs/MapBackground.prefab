@@ -89,3 +89,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MapRoom: {fileID: 6472375924218695515, guid: 60c6d2732c907fe4b916d9e93630c077, type: 3}
+  normalRoomColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
+  bossRoomColor: {r: 0.1764706, g: 0, b: 0, a: 0}
+  redRoomColor: {r: 0.72156864, g: 0.18039216, b: 0.18039216, a: 0}
+  yellowRoomColor: {r: 0.8509804, g: 0.83137256, b: 0.28235295, a: 0}
+  greenRoomColor: {r: 0.17254902, g: 0.9490196, b: 0.28627452, a: 0}
+  blueRoomColor: {r: 0.16078432, g: 0.41960785, b: 0.79607844, a: 0}

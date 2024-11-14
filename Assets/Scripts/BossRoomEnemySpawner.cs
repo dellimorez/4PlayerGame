@@ -1,20 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawnerScript : MonoBehaviour
+public class BossRoomEnemySpawner : EnemySpawnerScript
 {
-    public GameObject[] EnemyPrefabs;
-    public RoomScript rs;
+    public GameObject BossPrefab;
 
-    protected GameObject[] enemies;
+    private const int numEnemies = 4;
 
     // Start is called before the first frame update
-    virtual protected void Start()
+    override protected void Start()
     {
         if (EnemyPrefabs.Length == 0) { return; }
-        int numEnemies = UnityEngine.Random.Range(2, 6);
         enemies = new GameObject[numEnemies];
 
-        for (int i = 0; i < numEnemies; i++)
+        enemies[0] = Instantiate(BossPrefab);
+        enemies[0].transform.position = rs.transform.position;
+
+        for (int i = 1; i < numEnemies; i++)
         {
             int randomEnemy = UnityEngine.Random.Range(0, EnemyPrefabs.Length);
             enemies[i] = Instantiate(EnemyPrefabs[randomEnemy]);
@@ -30,21 +33,6 @@ public class EnemySpawnerScript : MonoBehaviour
             pos.y += yOffset;
 
             enemies[i].transform.position = pos;
-        }
-    }
-
-    virtual protected void FixedUpdate()
-    {
-        int enemiesAlive = 0;
-        foreach (var enemy in enemies)
-        {
-            if (enemy) { enemiesAlive++; }
-        }
-
-        if (enemiesAlive == 0)
-        {
-            rs.UnlockRoom();
-            Destroy(gameObject);
         }
     }
 }

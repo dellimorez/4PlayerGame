@@ -16,14 +16,6 @@ namespace EnemyScripts
         private float currentCirclingAngle = 0f;
         private Vector2 desiredPosition;
 
-        public override void Start()
-        {
-            base.Start();
-
-            health = 2;
-            strength = 1;
-        }
-
         public override void Update()
         {
             // Check if close to player, if not go to them
@@ -108,17 +100,6 @@ namespace EnemyScripts
             }
 
             rb.velocity = movement * speed * speedModifier * Time.deltaTime;
-
-            //target.transform.position = desiredPosition;
-        }
-
-        // Temporary before weapons
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if(collision.gameObject.CompareTag("Player"))
-            {
-                Destroy(gameObject);
-            }
         }
     }
 }

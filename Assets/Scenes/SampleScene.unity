@@ -504,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3606422456270393660, guid: 249b052f21ef1c244b88c036efcaadae, type: 3}
       propertyPath: speed
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6520080433612307829, guid: 249b052f21ef1c244b88c036efcaadae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -875,11 +875,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bad216b6ecd8c24f98bd6e3586349d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boardSize: 6
+  boardSize: 8
   maxRoomCount: 15
   roomScale: 1.25
   roomPrefabs:
   - {fileID: 8415710535690791778, guid: 37f558e0cbf56ac4f9e82686879563fd, type: 3}
+  - {fileID: 8415710535690791778, guid: 232777370aed0ba4fa2245d85dc3be29, type: 3}
   - {fileID: 8415710535690791778, guid: 96f0f65bc65643f439ca35d446524c9a, type: 3}
   - {fileID: 8415710535690791778, guid: 74643f91beb387d4ea9f9657a363880a, type: 3}
   - {fileID: 8415710535690791778, guid: 107f2e9a7d6380d488e534bf54fcbbc6, type: 3}
@@ -944,6 +945,10 @@ PrefabInstance:
     - target: {fileID: 5646287867945211428, guid: 40eb1a153e92ef547aa30ac765498c05, type: 3}
       propertyPath: blueRoomColor.r
       value: 0.16078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646287867945211428, guid: 40eb1a153e92ef547aa30ac765498c05, type: 3}
+      propertyPath: bossRoomColor.r
+      value: 0.1764706
       objectReference: {fileID: 0}
     - target: {fileID: 5646287867945211428, guid: 40eb1a153e92ef547aa30ac765498c05, type: 3}
       propertyPath: greenRoomColor.b

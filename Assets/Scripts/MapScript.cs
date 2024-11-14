@@ -14,12 +14,14 @@ public class MapScript : MonoBehaviour
     private static RectTransform rt;
     public static Dictionary<Tuple<int, int>, GameObject> roomDictionary;
     public Color normalRoomColor;
+    public Color bossRoomColor;
     public Color redRoomColor;
     public Color yellowRoomColor;
     public Color greenRoomColor;
     public Color blueRoomColor;
 
     private static Color staticNormalRoomColor;
+    private static Color staticBossRoomColor;
     private static Color staticRedRoomColor;
     private static Color staticYellowRoomColor;
     private static Color staticGreenRoomColor;
@@ -31,15 +33,17 @@ public class MapScript : MonoBehaviour
     {
         self = gameObject;
         staticNormalRoomColor = normalRoomColor;
+        staticBossRoomColor = bossRoomColor;
         staticRedRoomColor = redRoomColor;
         staticYellowRoomColor = yellowRoomColor;
         staticGreenRoomColor = greenRoomColor;
         staticBlueRoomColor = blueRoomColor;
 
+        staticBossRoomColor.a = 1;
         staticRedRoomColor.a = 1;
         staticYellowRoomColor.a = 1;
-        staticBlueRoomColor.a = 1;
         staticGreenRoomColor.a = 1;
+        staticBlueRoomColor.a = 1;
     }
 
     // Start is called before the first frame update
@@ -66,6 +70,9 @@ public class MapScript : MonoBehaviour
         Image mapRoomImage = mr.transform.GetChild(0).gameObject.GetComponent<Image>();
         switch(type)
         {
+            case LevelGenerator.RoomTypes.Boss:
+                mapRoomImage.color = staticBossRoomColor;
+                break;
             case LevelGenerator.RoomTypes.Red:
                 mapRoomImage.color = staticRedRoomColor;
                 break;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 357032928702772498}
   - component: {fileID: 8250579329223590016}
   - component: {fileID: 1883068283871128659}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TestEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 150
-  health: 3
+  health: 2
   strength: 1
   movement: {x: 0, y: 0}
   rb: {fileID: 0}
@@ -160,7 +160,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

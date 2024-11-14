@@ -31,7 +31,7 @@ public class RoomScript : MonoBehaviour
     public Color inactiveRoomColor;
 
     // Start is called before the first frame update
-    private void Start()
+    virtual protected void Start()
     {
         if(!roomToLeft)
         {
@@ -68,7 +68,7 @@ public class RoomScript : MonoBehaviour
         bottomDoor.SetActive(false);
     }
 
-    private void LockRoom()
+    virtual protected void LockRoom()
     {
         spawnedEnemies = true;
         
@@ -84,7 +84,7 @@ public class RoomScript : MonoBehaviour
     }
 
     // Only happens after the player beats the room
-    public void UnlockRoom()
+    virtual public void UnlockRoom()
     {
         leftDoor.SetActive(false);
         rightDoor.SetActive(false);
@@ -109,7 +109,7 @@ public class RoomScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    virtual protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.CompareTag("PlayerRoomCollider")) return;
         
@@ -118,8 +118,8 @@ public class RoomScript : MonoBehaviour
             visited = true;
             MapScript.NewRoomVisited(pos, roomType);
         }
-        MapScript.roomDictionary[PlayerController.currentRoom].GetComponent<Image>().color = activeRoomColor;
-        MapScript.roomDictionary[pos].GetComponent<Image>().color = inactiveRoomColor;
+        MapScript.roomDictionary[PlayerController.currentRoom].GetComponent<Image>().color = inactiveRoomColor;
+        MapScript.roomDictionary[pos].GetComponent<Image>().color = activeRoomColor;
         PlayerController.currentRoom = pos;
 
         if (!isStartingRoom && !spawnedEnemies)

@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+using PlayerScript;
 using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
@@ -8,6 +6,7 @@ public class EnemyScript : MonoBehaviour
     public float speed = 1;
     public int health = 1;
     public int strength = 1;
+    public int maxEnemyCount = 10;
 
     public Vector2 movement;
     public Rigidbody2D rb;
@@ -25,15 +24,20 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        
+        Vector2 playerPosition = PlayerController.playerPosition;
+        float angleDiff = Mathf.Atan2(playerPosition.y - transform.position.y,
+            playerPosition.x - transform.position.x);
+
+        movement = new Vector2(Mathf.Cos(angleDiff), Mathf.Sin(angleDiff));
+        movement.Normalize();
     }
 
     public virtual void FixedUpdate()
     {
-
+        rb.velocity = movement * speed * Time.deltaTime;
     }
 
-    public void TakeDamage(int  damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         if (health <= 0)
@@ -49,5 +53,12 @@ public class EnemyScript : MonoBehaviour
 
         // Deactivate the enemy object
         Destroy(gameObject);
+    }
+    protected void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            // TODO: Add damaging player
+        }
     }
 }

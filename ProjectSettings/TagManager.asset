@@ -6,15 +6,16 @@ TagManager:
   tags:
   - Room
   - PlayerRoomCollider
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PlayerProjectile
   - Water
   - UI
-  - 
-  - 
+  - FlyingEnemy
+  - GroundedEnemy
   - 
   - 
   - 

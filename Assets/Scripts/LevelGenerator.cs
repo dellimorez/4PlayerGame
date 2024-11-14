@@ -7,6 +7,7 @@ public class LevelGenerator : MonoBehaviour
     {
         None,
         Normal,
+        Boss,
         Red,
         Yellow,
         Green,
@@ -27,6 +28,7 @@ public class LevelGenerator : MonoBehaviour
     public static GameObject[] staticKeys;
 
     private float roomFootprint = 16;
+    private float bossRoomFootprint = 16;
     private const int minimumRoomCount = ((int)RoomTypes.BlueSpawn - (int)RoomTypes.Red) + 5;
 
     private void Awake()
@@ -39,12 +41,13 @@ public class LevelGenerator : MonoBehaviour
     private void Start()
     {
         maxRoomCount = (uint)Math.Max(maxRoomCount, minimumRoomCount);
-        if (boardSize * boardSize < minimumRoomCount) { return; }
-        gameBoard = new RoomTypes[boardSize,boardSize];
+        if (boardSize - 2 * boardSize - 2 < minimumRoomCount) { return; }
+        gameBoard = new RoomTypes[boardSize, boardSize];
         uint startX = boardSize / 2;
-        uint startY = boardSize / 2;
+        uint startY = startX;
 
         roomFootprint = 16 * roomScale;
+        bossRoomFootprint = 16 * roomScale;
 
         // Generate random bools
         generateMap(startX, startY, 0);
@@ -55,8 +58,8 @@ public class LevelGenerator : MonoBehaviour
             bool found = false;
             while(!found)
             {
-                int randomX = UnityEngine.Random.Range(0, (int)boardSize);
-                int randomY = UnityEngine.Random.Range(0, (int)boardSize);
+                int randomX = UnityEngine.Random.Range(1, (int)boardSize - 1);
+                int randomY = UnityEngine.Random.Range(1, (int)boardSize - 1);
 
                 if(randomX == startX || randomY == startY || gameBoard[randomX, randomY] != RoomTypes.Normal)
                 {
@@ -68,18 +71,28 @@ public class LevelGenerator : MonoBehaviour
             }
         }
 
+        // TODO: Generate boss room
+        // Get left most room
+        Tuple<int, int> leftMostRoom = getLeftMostRoom();
+        gameBoard[leftMostRoom.Item1 - 1, leftMostRoom.Item2] = RoomTypes.Boss;
+        Debug.Log(leftMostRoom);
 
         // Create room prefabs at each area
         for(int i = 0; i < boardSize; i++)
         {
             for(int j = 0; j < boardSize; j++)
             {
-                if(gameBoard[i,j] == RoomTypes.None) { continue; }
+                if(gameBoard[i, j] == RoomTypes.None) { continue; }
 
                 GameObject newRoom;
                 if ((int)gameBoard[i, j] >= (int)RoomTypes.Red && (int)gameBoard[i, j] <= (int)RoomTypes.Blue)
                 {
                     newRoom = Instantiate(roomPrefabs[(int)gameBoard[i, j] - 1]);
+                }
+                else if (gameBoard[i,j] == RoomTypes.Boss)
+                {
+                    newRoom = Instantiate(roomPrefabs[(int)RoomTypes.Boss - 1]);
+                    Debug.Log("Created boss room");
                 }
                 else
                 {
@@ -89,6 +102,12 @@ public class LevelGenerator : MonoBehaviour
 
                 RoomScript newRoomScript = newRoom.GetComponent<RoomScript>();
                 float xPos = (i - (int)startX) * roomFootprint;
+
+                if (gameBoard[i, j] == RoomTypes.Boss)
+                {
+                    xPos -= roomFootprint / 2 - (0.5f * roomScale);
+                }
+
                 float yPos = (j - (int)startY) * roomFootprint * -1;
                 newRoom.transform.position = new Vector3(xPos, yPos, 0);
                 newRoom.transform.localScale = new Vector3(roomScale, roomScale, roomScale);
@@ -127,7 +146,7 @@ public class LevelGenerator : MonoBehaviour
         int roomNumber = UnityEngine.Random.Range(0, 4);
         while (chosenRoom == -1)
         {
-            if (roomNumber == 0 && x > 0 && gameBoard[x - 1, y] == RoomTypes.None)
+            if (roomNumber == 0 && x > 1 && gameBoard[x - 1, y] == RoomTypes.None)
             {
                 chosenRoom = 0;
                 break;
@@ -136,7 +155,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 roomNumber++;
             }
-            if (roomNumber == 1 && x < boardSize - 1 && gameBoard[x + 1, y] == RoomTypes.None)
+            if (roomNumber == 1 && x < boardSize - 2 && gameBoard[x + 1, y] == RoomTypes.None)
             {
                 chosenRoom = 1;
                 break;
@@ -145,7 +164,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 roomNumber++;
             }
-            if (roomNumber == 2 && y > 0 && gameBoard[x, y - 1] == RoomTypes.None)
+            if (roomNumber == 2 && y > 1 && gameBoard[x, y - 1] == RoomTypes.None)
             {
                 chosenRoom = 2;
                 break;
@@ -154,7 +173,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 roomNumber++;
             }
-            if (roomNumber == 3 && y < boardSize - 1 && gameBoard[x, y + 1] == RoomTypes.None)
+            if (roomNumber == 3 && y < boardSize - 2 && gameBoard[x, y + 1] == RoomTypes.None)
             {
                 chosenRoom = 3;
                 break;
@@ -209,6 +228,22 @@ public class LevelGenerator : MonoBehaviour
         {
             generateMap(x, y + 1, currentRoomCount);
         }
+    }
+
+    Tuple<int, int> getLeftMostRoom()
+    {
+        Tuple<int, int> position = Tuple.Create(1000,1000);
+        for (int i = 0; i < boardSize; i++)
+        {
+            for (int j = 0; j < boardSize; j++)
+            {
+                if (gameBoard[i, j] != RoomTypes.None && i < position.Item1)
+                {
+                    position = Tuple.Create(i, j);
+                }
+            }
+        }
+        return position;
     }
 
     #endregion Private functions

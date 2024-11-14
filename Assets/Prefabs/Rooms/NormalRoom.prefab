@@ -1887,6 +1887,7 @@ MonoBehaviour:
   isStartingRoom: 0
   spawnedEnemies: 0
   visited: 0
+  roomType: 0
   leftDoor: {fileID: 2655311132284518003}
   rightDoor: {fileID: 1864840505682599485}
   topDoor: {fileID: 6514889478076837752}
@@ -1900,8 +1901,8 @@ MonoBehaviour:
   bottomWall1: {fileID: 552292755258883827}
   bottomWall2: {fileID: 8119545962033980995}
   EnemySpawner: {fileID: 5037045302371832088, guid: ec1067bae8432f6489a2f297de02c0df, type: 3}
-  activeRoomColor: {r: 0, g: 0, b: 0, a: 0}
-  inactiveRoomColor: {r: 0, g: 1, b: 0.9836302, a: 1}
+  activeRoomColor: {r: 0, g: 1, b: 0.9843137, a: 1}
+  inactiveRoomColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &841472598791815069
 BoxCollider2D:
   m_ObjectHideFlags: 0
