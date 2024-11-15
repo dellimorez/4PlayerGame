@@ -12,7 +12,7 @@ In this game, the player reads the letters scattered around the house for clues,
 Important Links
 Game URL: <  >
 GITHUB URL: < >
-Gameplay Video URL: < https://docs.google.com/presentation/d/1ltksFZTwf20DIA7OjnrTME19xqIes-ApCHOYcnqLO3c/edit?usp=sharing >
+Gameplay Video URL: < [https://docs.google.com/presentation/d/1ltksFZTwf20DIA7OjnrTME19xqIes-ApCHOYcnqLO3c/edit?usp=sharing](https://docs.google.com/presentation/d/1VlixH86B0g3U2OeZn8y-Ke0juXJZt3K96-vAX8eHq5M/edit#slide=id.g31245ec7097_0_0) >
 Google Doc writeup: < >
 Files in the repository
 ./unity/ - this folder contains the Unity game files associated with this game.
