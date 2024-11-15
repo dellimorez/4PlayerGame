@@ -17,6 +17,8 @@ Gameplay Video URL: < https://drive.google.com/file/d/1_HV8MjJX_wLm-VbXXCODIesrm
 
 Design Doc: < https://docs.google.com/presentation/d/1VlixH86B0g3U2OeZn8y-Ke0juXJZt3K96-vAX8eHq5M/edit?usp=sharing >
 
+Asset List: < https://docs.google.com/spreadsheets/d/1N2HhQp5Rz5RywajRDIJnm1XXLkaesZwHmcKgUTagZOE/edit?gid=1444431360#gid=1444431360 >
+
 Files in the repository
 ./unity/ - this folder contains the Unity game files associated with this game.
 
