@@ -5,20 +5,16 @@ public class EnemyScript : MonoBehaviour
 {
     public float speed = 1;
     public int health = 1;
-    public int strength = 1;
+    public int strength = 1; // Damage the enemy deals to the player
     public int maxEnemyCount = 10;
 
     public Vector2 movement;
     public Rigidbody2D rb;
 
-    // for when we create animations
-    // private Animator anim;
-
     // Start is called before the first frame update
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -48,17 +44,21 @@ public class EnemyScript : MonoBehaviour
 
     private void Die()
     {
-        // Death Animation
-        // anim.SetTrigger("Die");
-
         // Deactivate the enemy object
         Destroy(gameObject);
     }
-    protected void OnTriggerEnter2D(Collider2D collision)
+
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            // TODO: Add damaging player
+            // Get the player's Health component and apply damage
+            Health playerHealth = collision.GetComponent<Health>();
+
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(strength); // Damage the player by the enemy's strength
+            }
         }
     }
 }

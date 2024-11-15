@@ -8,9 +8,15 @@ namespace PlayerScript
         [SerializeField] private float attackRange = 1f; // The range for firepoint positioning
         [SerializeField] private GameObject projectilePrefab; // Reference to the projectile prefab
         [SerializeField] private float attackCooldown = 0.5f; // Cooldown for attacks
+        [SerializeField] private Animator anim; // Reference to the Animator component
 
         private float lastAttackTime = 0f; // Time of the last attack
-        private bool canAttack = true; // Can the player attack?
+        private Vector3 originalScale; // Store the original scale of the player
+
+        private void Start()
+        {
+            originalScale = transform.localScale; // Save the player's original scale for flipping
+        }
 
         private void Update()
         {
@@ -20,22 +26,28 @@ namespace PlayerScript
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
                     MoveFirepoint(Vector2.up);
+                    TriggerAttackAnimation(); // Trigger attack animation
                     FireProjectile(Vector2.up);
                 }
                 else if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
                     MoveFirepoint(Vector2.down);
+                    TriggerAttackAnimation(); // Trigger attack animation
                     FireProjectile(Vector2.down);
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
                     MoveFirepoint(Vector2.left);
+                    TriggerAttackAnimation(); // Trigger attack animation
                     FireProjectile(Vector2.left);
+                    FlipPlayerSprite(-1); // Face left
                 }
                 else if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
                     MoveFirepoint(Vector2.right);
+                    TriggerAttackAnimation(); // Trigger attack animation
                     FireProjectile(Vector2.right);
+                    FlipPlayerSprite(1); // Face right
                 }
             }
         }
@@ -61,6 +73,28 @@ namespace PlayerScript
                 projectile.GetComponent<Projectile>().SetDirection(direction);
 
                 lastAttackTime = Time.time; // Reset the attack cooldown
+            }
+        }
+
+        private void TriggerAttackAnimation()
+        {
+            // Trigger the attack animation if the animator is assigned
+            if (anim != null)
+            {
+                anim.SetTrigger("attack"); 
+            }
+        }
+
+        private void FlipPlayerSprite(int direction)
+        {
+            // Flip the player's sprite based on the attack direction (-1 for left, 1 for right)
+            if (direction == -1) // Left
+            {
+                transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+            }
+            else if (direction == 1) // Right
+            {
+                transform.localScale = new Vector3(Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
             }
         }
     }

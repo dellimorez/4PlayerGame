@@ -36,8 +36,7 @@ public class Health : MonoBehaviour
         spriteRend = GetComponent<SpriteRenderer>();
     }
 
-    // Call this when the object takes damage
-    public void TakeDamage(float _damage)
+    public void TakeDamage(int _damage)
     {
         if (invulnerable || dead) return;
 
@@ -47,7 +46,6 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("hurt"); // Play hurt animation
             StartCoroutine(Invunerability()); // Activate invulnerability frames
-            //SoundManager.instance.PlaySound(hurtSound);
         }
         else
         {
@@ -59,7 +57,6 @@ public class Health : MonoBehaviour
 
                 anim.SetTrigger("die"); // Trigger death animation
                 dead = true;
-                //SoundManager.instance.PlaySound(deathSound);
 
                 // If this is the player, show the game over screen
                 if (CompareTag("Player"))
@@ -74,6 +71,7 @@ public class Health : MonoBehaviour
         }
     }
 
+
     // Add health to the object
     public void AddHealth(float _value)
     {
@@ -84,7 +82,7 @@ public class Health : MonoBehaviour
     private IEnumerator Invunerability()
     {
         invulnerable = true;
-        Physics2D.IgnoreLayerCollision(10, 11, true);
+        Physics2D.IgnoreLayerCollision(10, 11, true); // Prevent further collisions (adjust if needed)
         for (int i = 0; i < numberOfFlashes; i++)
         {
             spriteRend.color = new Color(1, 0, 0, 0.5f); // Flash the sprite
@@ -92,7 +90,7 @@ public class Health : MonoBehaviour
             spriteRend.color = Color.white;
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
-        Physics2D.IgnoreLayerCollision(10, 11, false);
+        Physics2D.IgnoreLayerCollision(10, 11, false); // Re-enable collisions
         invulnerable = false;
     }
 
@@ -110,7 +108,7 @@ public class Health : MonoBehaviour
     {
         AddHealth(startingHealth); // Restore health
         anim.ResetTrigger("die");  // Reset death trigger
-        anim.Play("Player_Idle");  // Play idle animation
+        anim.Play("idle-Animation");  // Play idle animation
         StartCoroutine(Invunerability());
         dead = false;
 
@@ -124,4 +122,10 @@ public class Health : MonoBehaviour
         restartButton.SetActive(false);
         quitButton.SetActive(false);
     }
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
 }
+

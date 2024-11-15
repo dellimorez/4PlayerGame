@@ -101,5 +101,45 @@ namespace EnemyScripts
 
             rb.velocity = movement * speed * speedModifier * Time.deltaTime;
         }
+
+        protected void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                // Log to check if the bat is colliding with the player
+                Debug.Log("Bat collided with the player!");
+
+                // Check if the player has a Health component
+                Health playerHealth = collision.gameObject.GetComponent<Health>();
+
+                if (playerHealth != null)
+                {
+                    // Log to confirm player has a Health component
+                    Debug.Log("Player has a Health component. Applying damage...");
+
+                    // Apply damage to the player
+                    playerHealth.TakeDamage(strength);
+
+                    // Log to show the player's new health after taking damage
+                    Debug.Log("Player health after damage: " + playerHealth.currentHealth);
+
+                    // Check if the hurt animation is being triggered
+                    Animator playerAnim = collision.gameObject.GetComponent<Animator>();
+                    if (playerAnim != null)
+                    {
+                        bool hurtAnimPlaying = playerAnim.GetCurrentAnimatorStateInfo(0).IsName("hurt");
+                        Debug.Log("Hurt animation playing: " + hurtAnimPlaying);
+                    }
+                    else
+                    {
+                        Debug.Log("Player does not have an Animator component!");
+                    }
+                }
+                else
+                {
+                    Debug.Log("Player does not have a Health component!");
+                }
+            }
+        }
     }
 }
