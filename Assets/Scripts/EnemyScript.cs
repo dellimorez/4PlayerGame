@@ -10,11 +10,13 @@ public class EnemyScript : MonoBehaviour
 
     public Vector2 movement;
     public Rigidbody2D rb;
+    protected Animator animator;
 
     // Start is called before the first frame update
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -48,12 +50,28 @@ public class EnemyScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    // If enemy is able to be phased through
+    virtual public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             // Get the player's Health component and apply damage
             Health playerHealth = collision.GetComponent<Health>();
+
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(strength); // Damage the player by the enemy's strength
+            }
+        }
+    }
+
+    // If enemy is solid
+    virtual public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Get the player's Health component and apply damage
+            Health playerHealth = collision.gameObject.GetComponent<Health>();
 
             if (playerHealth != null)
             {

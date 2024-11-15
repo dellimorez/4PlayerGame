@@ -204,7 +204,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.690566, g: 0.690566, b: 0.690566, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -391,12 +391,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -719,11 +719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676063160549640660, guid: 40eb1a153e92ef547aa30ac765498c05, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -675
+      value: -996
       objectReference: {fileID: 0}
     - target: {fileID: 5676063160549640660, guid: 40eb1a153e92ef547aa30ac765498c05, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -258
+      value: -441
       objectReference: {fileID: 0}
     - target: {fileID: 5676063160549640660, guid: 40eb1a153e92ef547aa30ac765498c05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -753,6 +753,10 @@ PrefabInstance:
     - target: {fileID: 3741171526872255586, guid: 79d73b898b6ee624fba8e55e5c0a6ccb, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741171526872255586, guid: 79d73b898b6ee624fba8e55e5c0a6ccb, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5186972695892512634, guid: 79d73b898b6ee624fba8e55e5c0a6ccb, type: 3}
       propertyPath: projectilePrefab
@@ -797,6 +801,14 @@ PrefabInstance:
     - target: {fileID: 5851721234066312737, guid: 79d73b898b6ee624fba8e55e5c0a6ccb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6031742341245518562, guid: 79d73b898b6ee624fba8e55e5c0a6ccb, type: 3}
+      propertyPath: playerSpeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118888578340848710, guid: 79d73b898b6ee624fba8e55e5c0a6ccb, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

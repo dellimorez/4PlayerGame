@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -97,10 +98,17 @@ public class Health : MonoBehaviour
     // Display the game over screen if the player dies
     private void ShowGameOverScreen()
     {
-        gameOverScreen.SetActive(true);
-        youDiedText.SetActive(true);
-        restartButton.SetActive(true);
-        quitButton.SetActive(true);
+        if(gameOverScreen)
+        {
+            gameOverScreen.SetActive(true);
+            youDiedText.SetActive(true);
+            restartButton.SetActive(true);
+            quitButton.SetActive(true);
+        }
+        else // Temporary
+        {
+            SceneManager.LoadScene("DeathScene");
+        }
     }
 
     // Respawn logic for the player
