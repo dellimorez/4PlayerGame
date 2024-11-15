@@ -10,10 +10,13 @@ Game Description
 In this game, the player reads the letters scattered around the house for clues, in order to find the key to escape the house. This game is inspired by rpgmaker games, in which it's a 48 bit pixel style horror game.
 
 Important Links
-Game URL: <  >
-GITHUB URL: < >
-Gameplay Video URL: < https://docs.google.com/presentation/d/1VlixH86B0g3U2OeZn8y-Ke0juXJZt3K96-vAX8eHq5M/edit?usp=sharing >
-Google Doc writeup: < >
+
+GITHUB URL: < https://github.com/dellimorez/4PlayerGame/ >
+
+Gameplay Video URL: < https://drive.google.com/file/d/1_HV8MjJX_wLm-VbXXCODIesrmITAJsDS/view?usp=sharing >
+
+Design Doc: < https://docs.google.com/presentation/d/1VlixH86B0g3U2OeZn8y-Ke0juXJZt3K96-vAX8eHq5M/edit?usp=sharing >
+
 Files in the repository
 ./unity/ - this folder contains the Unity game files associated with this game.
 
