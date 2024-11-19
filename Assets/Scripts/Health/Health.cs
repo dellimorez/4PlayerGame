@@ -35,6 +35,7 @@ public class Health : MonoBehaviour
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
+        PlayerHealthUIScript.playerHealth = this;
     }
 
     public void TakeDamage(int _damage)

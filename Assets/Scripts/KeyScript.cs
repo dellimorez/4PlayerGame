@@ -10,6 +10,7 @@ public class KeyScript : MonoBehaviour
         if (!other.gameObject.CompareTag("Player")) { return; }
 
         PlayerController.keysCollected[keyType] = true;
+        KeyUIScript.obtainedKey(keyType);
         Destroy(gameObject);
     }
 }
