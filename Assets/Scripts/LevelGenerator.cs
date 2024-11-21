@@ -18,7 +18,7 @@ public class LevelGenerator : MonoBehaviour
         BlueSpawn
     }
 
-    private RoomTypes[,] gameBoard;
+    public RoomTypes[,] gameBoard;
     public uint boardSize = 13;
     public uint maxRoomCount = 40;
     public float roomScale = 3;
@@ -27,7 +27,7 @@ public class LevelGenerator : MonoBehaviour
     
     public static GameObject[] staticKeys;
 
-    private float roomFootprint = 16;
+    public float roomFootprint = 16;
     private float bossRoomFootprint = 16;
     private const int minimumRoomCount = ((int)RoomTypes.BlueSpawn - (int)RoomTypes.Red) + 5;
 

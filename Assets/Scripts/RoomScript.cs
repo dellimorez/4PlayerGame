@@ -11,9 +11,10 @@ public class RoomScript : MonoBehaviour
     public bool roomToBottom;
     public bool isStartingRoom;
     public bool spawnedEnemies;
+    public bool spawnedHealthCollectibles;
     public bool visited = false;
     public LevelGenerator.RoomTypes roomType;
-    public Tuple<int,int> pos = new Tuple<int, int>(0,0);
+    public Tuple<int, int> pos = new Tuple<int, int>(0, 0);
     public GameObject leftDoor;
     public GameObject rightDoor;
     public GameObject topDoor;
@@ -27,13 +28,14 @@ public class RoomScript : MonoBehaviour
     public GameObject bottomWall1;
     public GameObject bottomWall2;
     public GameObject EnemySpawner;
+    public GameObject HealthCollectibleSpawner; // Added health collectible spawner
     public Color activeRoomColor;
     public Color inactiveRoomColor;
 
     // Start is called before the first frame update
     virtual protected void Start()
     {
-        if(!roomToLeft)
+        if (!roomToLeft)
         {
             leftWall1.transform.localScale = new Vector3(1, 15, 0);
             Vector3 newPosition = leftWall1.transform.localPosition;
@@ -71,16 +73,33 @@ public class RoomScript : MonoBehaviour
     virtual protected void LockRoom()
     {
         spawnedEnemies = true;
-        
+
         if (roomToLeft) { leftDoor.SetActive(true); }
         if (roomToRight) { rightDoor.SetActive(true); }
         if (roomToTop) { topDoor.SetActive(true); }
         if (roomToBottom) { bottomDoor.SetActive(true); }
 
+        // Instantiate the enemy spawner
         GameObject spawner = Instantiate(EnemySpawner);
         EnemySpawnerScript script = spawner.GetComponent<EnemySpawnerScript>();
 
         script.rs = this;
+
+        // Instantiate health collectible spawner after enemies are spawned
+        SpawnHealthCollectibles();
+    }
+
+    // Spawn health collectibles logic
+    virtual protected void SpawnHealthCollectibles()
+    {
+        if (!spawnedHealthCollectibles && HealthCollectibleSpawner != null)
+        {
+            spawnedHealthCollectibles = true;
+            GameObject healthSpawner = Instantiate(HealthCollectibleSpawner);
+            HealthCollectibleSpawner healthScript = healthSpawner.GetComponent<HealthCollectibleSpawner>();
+
+            healthScript.rs = this; // Assign the room to the health spawner script
+        }
     }
 
     // Only happens after the player beats the room
@@ -90,7 +109,7 @@ public class RoomScript : MonoBehaviour
         rightDoor.SetActive(false);
         topDoor.SetActive(false);
         bottomDoor.SetActive(false);
-        
+
         // TODO: Spawn keys if a spawn room
         switch (roomType)
         {
@@ -112,7 +131,7 @@ public class RoomScript : MonoBehaviour
     virtual protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.CompareTag("PlayerRoomCollider")) return;
-        
+
         if (!visited)
         {
             visited = true;
@@ -124,7 +143,7 @@ public class RoomScript : MonoBehaviour
 
         if (!isStartingRoom && !spawnedEnemies)
         {
-            LockRoom();
+            LockRoom(); // Lock the room and spawn enemies and health collectibles
         }
     }
 }

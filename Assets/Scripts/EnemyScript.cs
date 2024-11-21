@@ -11,12 +11,19 @@ public class EnemyScript : MonoBehaviour
     public Vector2 movement;
     public Rigidbody2D rb;
     protected Animator animator;
+    private SpriteRenderer spriteRenderer;  // Add a reference to the SpriteRenderer
+    public Color flashColor = Color.red;    // Color to flash when hit
+    public float flashDuration = 0.1f;      // How long to flash red
+
+    private Color originalColor;            // Store the original color
 
     // Start is called before the first frame update
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();  // Get the SpriteRenderer component
+        originalColor = spriteRenderer.color;  // Store the original color of the sprite
     }
 
     // Update is called once per frame
@@ -38,10 +45,23 @@ public class EnemyScript : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        FlashRed();  // Call the function to flash red
+
         if (health <= 0)
         {
             Die();
         }
+    }
+
+    private void FlashRed()
+    {
+        spriteRenderer.color = flashColor;  // Change the sprite color to red
+        Invoke("ResetColor", flashDuration); // Reset the color after a delay
+    }
+
+    private void ResetColor()
+    {
+        spriteRenderer.color = originalColor;  // Revert the sprite color to its original
     }
 
     private void Die()

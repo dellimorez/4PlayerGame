@@ -18,6 +18,7 @@ namespace PlayerScript
         private Animator anim;
         private Vector3 originalScale; // Store the original scale
 
+
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -65,7 +66,5 @@ namespace PlayerScript
             // You can add conditions here based on attack cooldowns or other factors
             return attackDirection != Vector2.zero; // Ensures the player is pressing an attack direction
         }
-
     }
 }
-

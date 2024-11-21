@@ -1596,6 +1596,7 @@ MonoBehaviour:
   - {fileID: 8467602418260296646, guid: 65c86f9e623450e4f95c6c0976b3ed22, type: 3}
   - {fileID: 8467602418260296646, guid: 7a5a7c37f0e82fb4a977e91e5935481c, type: 3}
   - {fileID: 8467602418260296646, guid: 9372e363a0f80794dbad5f36e1dfc190, type: 3}
+  roomFootprint: 16
 --- !u!4 &1811653391
 Transform:
   m_ObjectHideFlags: 0
