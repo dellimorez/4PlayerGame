@@ -10,6 +10,7 @@ public class PauseMenuScript : MonoBehaviour
     public GameObject ResumeButton;
     public GameObject RestartButton;
     public GameObject ExitButton;
+    public GameObject PauseButton;
     public GameObject Background;
     public GameObject TutorialImage;
 
@@ -20,6 +21,7 @@ public class PauseMenuScript : MonoBehaviour
         ResumeButton.GetComponent<Button>().onClick.AddListener(UnpauseGame);
         RestartButton.GetComponent<Button>().onClick.AddListener(RestartGame);
         ExitButton.GetComponent<Button>().onClick.AddListener(ExitGame);
+        PauseButton.GetComponent<Button>().onClick.AddListener(PauseGame);
 
         showPauseMenu(false);
     }
@@ -73,6 +75,7 @@ public class PauseMenuScript : MonoBehaviour
         ResumeButton.SetActive(active);
         RestartButton.SetActive(active);
         ExitButton.SetActive(active);
+        PauseButton.SetActive(!active);
         Background.SetActive(active);
         TutorialImage.SetActive(active);
     }
