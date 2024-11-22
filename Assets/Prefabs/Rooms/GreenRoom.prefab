@@ -186,8 +186,8 @@ Transform:
   m_GameObject: {fileID: 1558781611617397871}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.014223576, y: -0.03, z: -0.020564094}
-  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.020564094}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8432844253873485419}
@@ -2523,6 +2523,7 @@ MonoBehaviour:
   roomToBottom: 0
   isStartingRoom: 0
   spawnedEnemies: 0
+  spawnedHealthCollectibles: 0
   visited: 0
   roomType: 0
   leftDoor: {fileID: 2655311132284518003}
@@ -2538,6 +2539,7 @@ MonoBehaviour:
   bottomWall1: {fileID: 552292755258883827}
   bottomWall2: {fileID: 8119545962033980995}
   EnemySpawner: {fileID: 5037045302371832088, guid: ec1067bae8432f6489a2f297de02c0df, type: 3}
+  HealthCollectibleSpawner: {fileID: 0}
   activeRoomColor: {r: 0, g: 1, b: 0.9843137, a: 1}
   inactiveRoomColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &841472598791815069
