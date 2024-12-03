@@ -24,8 +24,10 @@ public class LevelGenerator : MonoBehaviour
     public float roomScale = 3;
     public GameObject[] roomPrefabs;
     public GameObject[] keys;
-    
+    public GameObject[] powerups;
+
     public static GameObject[] staticKeys;
+    public static GameObject[] staticPowerups;
 
     public float roomFootprint = 16;
     private float bossRoomFootprint = 16;
@@ -35,6 +37,7 @@ public class LevelGenerator : MonoBehaviour
     {
         MapScript.boardSize = boardSize;
         staticKeys = keys; 
+        staticPowerups = powerups;
     }
 
     // Start is called before the first frame update

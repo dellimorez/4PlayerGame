@@ -7,7 +7,7 @@ namespace PlayerScript
         [SerializeField] private float speed; // Speed at which the fireball moves
         private Vector2 direction; // Direction the fireball will move in
 
-        private void Update()
+        virtual public void FixedUpdate()
         {
             // Move the fireball in the specified direction
             transform.Translate(direction * speed * Time.deltaTime);
@@ -16,13 +16,13 @@ namespace PlayerScript
             Destroy(gameObject, 5f);
         }
 
-        public void SetDirection(Vector2 dir)
+        virtual public void SetDirection(Vector2 dir)
         {
             // Set the direction of the fireball based on input
             direction = dir;
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        virtual public void OnTriggerEnter2D(Collider2D collision)
         {
             // Check if the projectile collides with an object tagged as "Enemy"
             if (collision.CompareTag("Enemy"))
@@ -37,6 +37,7 @@ namespace PlayerScript
                 // Destroy the projectile on impact
                 Destroy(gameObject);
             }
+            Destroy(gameObject);
         }
     }
 }

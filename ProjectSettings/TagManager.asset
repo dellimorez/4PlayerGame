@@ -7,6 +7,8 @@ TagManager:
   - Room
   - PlayerRoomCollider
   - Enemy
+  - Health Collectible
+  - StaticObject
   layers:
   - Default
   - TransparentFX

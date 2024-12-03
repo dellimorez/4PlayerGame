@@ -86,7 +86,7 @@ public class RoomScript : MonoBehaviour
         script.rs = this;
 
         // Instantiate health collectible spawner after enemies are spawned
-        SpawnHealthCollectibles();
+        //SpawnHealthCollectibles();
     }
 
     // Spawn health collectibles logic
@@ -125,6 +125,14 @@ public class RoomScript : MonoBehaviour
             case LevelGenerator.RoomTypes.BlueSpawn:
                 Instantiate(LevelGenerator.staticKeys[3], gameObject.transform);
                 break;
+        }
+
+        // Spawn a power up randomly
+        int randomNumber = UnityEngine.Random.Range(0, 3);
+        if (randomNumber == 0)
+        {
+            randomNumber = UnityEngine.Random.Range(0, LevelGenerator.staticPowerups.Length);
+            Instantiate(LevelGenerator.staticPowerups[randomNumber], gameObject.transform);
         }
     }
 
