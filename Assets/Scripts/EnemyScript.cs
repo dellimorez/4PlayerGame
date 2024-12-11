@@ -17,16 +17,14 @@ public class EnemyScript : MonoBehaviour
 
     private Color originalColor;            // Store the original color
 
-    // Start is called before the first frame update
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();  // Get the SpriteRenderer component
-        originalColor = spriteRenderer.color;  // Store the original color of the sprite
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
 
-    // Update is called once per frame
     public virtual void Update()
     {
         Vector2 playerPosition = PlayerController.playerPosition;
@@ -42,10 +40,17 @@ public class EnemyScript : MonoBehaviour
         rb.velocity = movement * speed * Time.deltaTime;
     }
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         health -= damage;
-        FlashRed();  // Call the function to flash red
+
+        // Trigger the "Hurt" animation
+        if (animator != null)
+        {
+            animator.SetTrigger("hurt");
+        }
+
+        FlashRed();
 
         if (health <= 0)
         {
@@ -55,19 +60,18 @@ public class EnemyScript : MonoBehaviour
 
     private void FlashRed()
     {
-        spriteRenderer.color = flashColor;  // Change the sprite color to red
-        Invoke("ResetColor", flashDuration); // Reset the color after a delay
+        spriteRenderer.color = flashColor;
+        Invoke("ResetColor", flashDuration);
     }
 
     private void ResetColor()
     {
-        spriteRenderer.color = originalColor;  // Revert the sprite color to its original
+        spriteRenderer.color = originalColor;
     }
 
     private void Die()
     {
-        // Deactivate the enemy object
-        Destroy(gameObject);
+        Destroy(gameObject); // Deactivate the enemy object
     }
 
     // If enemy is able to be phased through
@@ -75,12 +79,10 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Get the player's Health component and apply damage
             Health playerHealth = collision.GetComponent<Health>();
-
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(strength); // Damage the player by the enemy's strength
+                playerHealth.TakeDamage(strength);
             }
         }
     }
@@ -90,12 +92,10 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Get the player's Health component and apply damage
             Health playerHealth = collision.gameObject.GetComponent<Health>();
-
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(strength); // Damage the player by the enemy's strength
+                playerHealth.TakeDamage(strength);
             }
         }
     }

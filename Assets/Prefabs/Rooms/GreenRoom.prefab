@@ -434,7 +434,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026696473, y: -0.012265958}
+  m_Offset: {x: 0.026696473, y: 0.016643822}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -445,7 +445,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5390876, y: 0.49949318}
+  m_Size: {x: 0.5390876, y: 0.44167364}
   m_EdgeRadius: 0
 --- !u!50 &5338583146517359293
 Rigidbody2D:
@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 2210779997933418543}
   - component: {fileID: 632732696950473540}
   - component: {fileID: 496952011943260137}
+  - component: {fileID: 7983012950284957624}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Untagged
@@ -550,7 +551,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  m_Color: {r: 0.17254902, g: 0.9490196, b: 0.28627452, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -632,6 +633,19 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7983012950284957624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864840505682599485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79f275c43d94c54683a912281630491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!1 &2059544906616755850
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +974,7 @@ GameObject:
   - component: {fileID: 6839408694044692144}
   - component: {fileID: 7730290872025174962}
   - component: {fileID: 4260186130634797032}
+  - component: {fileID: 2532184368383067922}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Untagged
@@ -1024,7 +1039,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  m_Color: {r: 0.17254902, g: 0.9490196, b: 0.28627452, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1106,6 +1121,19 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2532184368383067922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2655311132284518003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79f275c43d94c54683a912281630491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!1 &3339711607297361531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1568,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026696473, y: -0.012265958}
+  m_Offset: {x: 0.026696473, y: -0.03057541}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1551,7 +1579,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5390876, y: 0.49949318}
+  m_Size: {x: 0.5390876, y: 0.46287426}
   m_EdgeRadius: 0
 --- !u!50 &7957722357702335039
 Rigidbody2D:
@@ -1834,6 +1862,7 @@ GameObject:
   - component: {fileID: 6718671763870296175}
   - component: {fileID: 1777072370085262870}
   - component: {fileID: 6502501349483303455}
+  - component: {fileID: 8952430800355107823}
   m_Layer: 0
   m_Name: Door3
   m_TagString: Untagged
@@ -1898,7 +1927,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  m_Color: {r: 0.17254902, g: 0.9490196, b: 0.28627452, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1980,6 +2009,19 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8952430800355107823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6514889478076837752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79f275c43d94c54683a912281630491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!1 &7076691576022084170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2456,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026696473, y: -0.012265958}
+  m_Offset: {x: 0.026696473, y: -0.036357403}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2425,7 +2467,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5390876, y: 0.49949318}
+  m_Size: {x: 0.5390876, y: 0.45131028}
   m_EdgeRadius: 0
 --- !u!50 &7627511238315811248
 Rigidbody2D:
@@ -2463,7 +2505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8432844253873485419}
-  - component: {fileID: 2906264291029410607}
+  - component: {fileID: 8425159504784464310}
   - component: {fileID: 841472598791815069}
   m_Layer: 0
   m_Name: GreenRoom
@@ -2505,7 +2547,7 @@ Transform:
   - {fileID: 4243697922144455586}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2906264291029410607
+--- !u!114 &8425159504784464310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2514,7 +2556,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8415710535690791778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e42f7136b02d547be3a51945f83fdd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6690f029b0856d54b8201e768446ee3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomToLeft: 0
@@ -2542,6 +2584,7 @@ MonoBehaviour:
   HealthCollectibleSpawner: {fileID: 0}
   activeRoomColor: {r: 0, g: 1, b: 0.9843137, a: 1}
   inactiveRoomColor: {r: 0, g: 0, b: 0, a: 0}
+  note: {fileID: 1385842079610312084, guid: a79e7f176d5b53d4296240d717a38eca, type: 3}
 --- !u!61 &841472598791815069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2599,6 +2642,7 @@ GameObject:
   - component: {fileID: 1283360442031349699}
   - component: {fileID: 7216923813065393611}
   - component: {fileID: 8754332093521617577}
+  - component: {fileID: 7870896083041294458}
   m_Layer: 0
   m_Name: Door4
   m_TagString: Untagged
@@ -2663,7 +2707,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  m_Color: {r: 0.17254902, g: 0.9490196, b: 0.28627452, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2745,6 +2789,19 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7870896083041294458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8584001390920419590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79f275c43d94c54683a912281630491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!1 &9143547095396867063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2863,7 +2920,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026696473, y: -0.012265958}
+  m_Offset: {x: 0.026696473, y: 0.014716484}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2874,7 +2931,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5390876, y: 0.49949318}
+  m_Size: {x: 0.5390876, y: 0.44552833}
   m_EdgeRadius: 0
 --- !u!50 &7079185775268551981
 Rigidbody2D:

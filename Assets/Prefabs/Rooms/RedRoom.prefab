@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 2210779997933418543}
   - component: {fileID: 632732696950473540}
   - component: {fileID: 496952011943260137}
+  - component: {fileID: 7887773009875399335}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Untagged
@@ -234,7 +235,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  m_Color: {r: 0.88235295, g: 0.03137255, b: 0.03137255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -316,6 +317,19 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7887773009875399335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864840505682599485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79f275c43d94c54683a912281630491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!1 &2059544906616755850
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +974,7 @@ GameObject:
   - component: {fileID: 6839408694044692144}
   - component: {fileID: 7730290872025174962}
   - component: {fileID: 4260186130634797032}
+  - component: {fileID: 8059943370623523394}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Untagged
@@ -1024,7 +1039,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  m_Color: {r: 0.88301885, g: 0.03332144, b: 0.03332144, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1106,6 +1121,19 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8059943370623523394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2655311132284518003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79f275c43d94c54683a912281630491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!1 &3339711607297361531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,6 +1704,7 @@ GameObject:
   - component: {fileID: 6718671763870296175}
   - component: {fileID: 1777072370085262870}
   - component: {fileID: 6502501349483303455}
+  - component: {fileID: 3935301042622853736}
   m_Layer: 0
   m_Name: Door3
   m_TagString: Untagged
@@ -1740,7 +1769,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  m_Color: {r: 0.88235295, g: 0.03137255, b: 0.03137255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1822,6 +1851,19 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3935301042622853736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6514889478076837752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79f275c43d94c54683a912281630491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
 --- !u!1 &6727958882860846203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,7 +2347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8432844253873485419}
-  - component: {fileID: 2906264291029410607}
+  - component: {fileID: -7957852705034166833}
   - component: {fileID: 841472598791815069}
   m_Layer: 0
   m_Name: RedRoom
@@ -2345,7 +2387,7 @@ Transform:
   - {fileID: 1700397689660627975}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2906264291029410607
+--- !u!114 &-7957852705034166833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2354,7 +2396,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8415710535690791778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e42f7136b02d547be3a51945f83fdd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6690f029b0856d54b8201e768446ee3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomToLeft: 0
@@ -2382,6 +2424,7 @@ MonoBehaviour:
   HealthCollectibleSpawner: {fileID: 0}
   activeRoomColor: {r: 0, g: 1, b: 0.9843137, a: 1}
   inactiveRoomColor: {r: 0, g: 0, b: 0, a: 0}
+  note: {fileID: 1385842079610312084, guid: d2abec29af99ef246af3062c4e786fe8, type: 3}
 --- !u!61 &841472598791815069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2439,6 +2482,7 @@ GameObject:
   - component: {fileID: 1283360442031349699}
   - component: {fileID: 7216923813065393611}
   - component: {fileID: 8754332093521617577}
+  - component: {fileID: 6250167093500752741}
   m_Layer: 0
   m_Name: Door4
   m_TagString: Untagged
@@ -2503,7 +2547,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+  m_Color: {r: 0.88235295, g: 0.03137255, b: 0.03137255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2585,3 +2629,16 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6250167093500752741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8584001390920419590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79f275c43d94c54683a912281630491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0

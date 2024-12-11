@@ -11,6 +11,7 @@ namespace PlayerScript
         public static Vector2 playerPosition = Vector2.zero;
         public static Tuple<int, int> currentRoom;
         public static bool[] keysCollected;
+        public static bool[] notesCollected;
         public static bool inCombat = false;
 
         private Vector2 movement;
@@ -25,6 +26,7 @@ namespace PlayerScript
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             currentRoom = new Tuple<int, int>(0, 0);
             keysCollected = new bool[LevelGenerator.staticKeys.Length];
+            notesCollected = new bool[LevelGenerator.staticKeys.Length];
             anim = GetComponent<Animator>();
             originalScale = transform.localScale; // Save the original scale at the start
         }

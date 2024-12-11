@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: 9b80f82b9f75b854ea2b7fa7180e8798, type: 3}
+  m_Sprite: {fileID: 586770970, guid: 725d95d34bdb05f469ac1ee627179341, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,8 +107,13 @@ MonoBehaviour:
   maxEnemyCount: 10
   movement: {x: 0, y: 0}
   rb: {fileID: 8250579329223590016}
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+  flashDuration: 0.1
   timeToCircle: 3
   circleRadius: 4
+  wingFlapSound: {fileID: 8300000, guid: c20577edc96cb4a45ab2f9d6d8aff4ac, type: 3}
+  flapSoundInterval: 1.5
+  flapVolume: 0.2
 --- !u!50 &8250579329223590016
 Rigidbody2D:
   serializedVersion: 4
@@ -168,9 +173,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000011920929, y: -0.008510491}
+  m_Offset: {x: -0.013626814, y: -0.008510947}
   serializedVersion: 2
-  m_Radius: 0.21631946
+  m_Radius: 6.906956
 --- !u!58 &4098023444925647551
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -203,9 +208,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0000001192093, y: -0.008510491}
+  m_Offset: {x: -0.040879846, y: -0.008510351}
   serializedVersion: 2
-  m_Radius: 0.2163195
+  m_Radius: 6.879702
 --- !u!95 &6059520149936000662
 Animator:
   serializedVersion: 5

@@ -9,6 +9,7 @@ namespace PlayerScript
         [SerializeField] private GameObject projectilePrefab; // Reference to the projectile prefab
         [SerializeField] private float attackCooldown = 0.5f; // Cooldown for attacks
         [SerializeField] private Animator anim; // Reference to the Animator component
+        [SerializeField] private AudioClip attackClip; // The sound clip for attack
 
         private float lastAttackTime = 0f; // Time of the last attack
         private Vector3 originalScale; // Store the original scale of the player
@@ -26,26 +27,26 @@ namespace PlayerScript
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
                     MoveFirepoint(Vector2.up);
-                    TriggerAttackAnimation(); // Trigger attack animation
+                    TriggerAttack();
                     FireProjectile(Vector2.up);
                 }
                 else if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
                     MoveFirepoint(Vector2.down);
-                    TriggerAttackAnimation(); // Trigger attack animation
+                    TriggerAttack();
                     FireProjectile(Vector2.down);
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
                     MoveFirepoint(Vector2.left);
-                    TriggerAttackAnimation(); // Trigger attack animation
+                    TriggerAttack();
                     FireProjectile(Vector2.left);
                     FlipPlayerSprite(-1); // Face left
                 }
                 else if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
                     MoveFirepoint(Vector2.right);
-                    TriggerAttackAnimation(); // Trigger attack animation
+                    TriggerAttack();
                     FireProjectile(Vector2.right);
                     FlipPlayerSprite(1); // Face right
                 }
@@ -76,12 +77,18 @@ namespace PlayerScript
             }
         }
 
-        private void TriggerAttackAnimation()
+        private void TriggerAttack()
         {
             // Trigger the attack animation if the animator is assigned
             if (anim != null)
             {
-                anim.SetTrigger("attack"); 
+                anim.SetTrigger("attack");
+            }
+
+            // Play the attack sound using the SoundManager
+            if (attackClip != null)
+            {
+                SoundManager.instance.PlaySound(attackClip, 1.0f); // 1.0f is full volume
             }
         }
 

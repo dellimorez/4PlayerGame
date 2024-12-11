@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 150
-  health: 2
+  health: 1
   strength: 1
   maxEnemyCount: 10
   movement: {x: 0, y: 0}

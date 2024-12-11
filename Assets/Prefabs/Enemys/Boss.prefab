@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4034015257561422129}
   - component: {fileID: 8140382304219685221}
   - component: {fileID: 8250579329223590016}
-  - component: {fileID: 1883068283871128659}
+  - component: {fileID: 3894129100178991863}
   - component: {fileID: 1319117267071041437}
   m_Layer: 7
   m_Name: Boss
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: e93d48d796c1e2d4aa79b986b368f294, type: 3}
-  m_Color: {r: 0, g: 0.6981132, b: 0.21859746, a: 1}
+  m_Sprite: {fileID: -1467672808, guid: a0dd5240a719b624b94019b642564fb2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,12 +100,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf640ca9544ce24982c8e6f751a5241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 200
   health: 15
   strength: 2
   maxEnemyCount: 1
   movement: {x: 0, y: 0}
   rb: {fileID: 0}
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+  flashDuration: 0.1
+  EnemyProjectile: {fileID: 653912420368166158, guid: 5ad1b4e21db047a44bcf288b982ef46a, type: 3}
+  minTimeToShoot: 3
+  maxTimeToShoot: 6
 --- !u!50 &8250579329223590016
 Rigidbody2D:
   serializedVersion: 4
@@ -133,8 +138,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &1883068283871128659
-CircleCollider2D:
+--- !u!61 &3894129100178991863
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -165,9 +170,19 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.006462908, y: -0.061396804}
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 13.63, y: 12.824415}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.16070145
+  m_Size: {x: 13.63, y: 12.824415}
+  m_EdgeRadius: 0
 --- !u!95 &1319117267071041437
 Animator:
   serializedVersion: 5
@@ -178,7 +193,7 @@ Animator:
   m_GameObject: {fileID: 3457878598069653863}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6d2045b2a9f1fee4f9af7c75fbd1a5b6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3abd9d05c5bd96d43a20ef7645936251, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

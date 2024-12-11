@@ -13,6 +13,7 @@ public class PauseMenuScript : MonoBehaviour
     public GameObject PauseButton;
     public GameObject Background;
     public GameObject TutorialImage;
+    public GameObject PauseBackground;
 
     public static bool isPaused = false;
 
@@ -78,5 +79,6 @@ public class PauseMenuScript : MonoBehaviour
         PauseButton.SetActive(!active);
         Background.SetActive(active);
         TutorialImage.SetActive(active);
+        PauseBackground.SetActive(active);
     }
 }
