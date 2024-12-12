@@ -10,6 +10,7 @@ namespace PlayerScript
 
         public static Vector2 playerPosition = Vector2.zero;
         public static Tuple<int, int> currentRoom;
+        public static float speedBonus = 1f;
         public static bool[] keysCollected;
         public static bool[] notesCollected;
         public static bool inCombat = false;
@@ -57,7 +58,7 @@ namespace PlayerScript
 
         private void FixedUpdate()
         {
-            rb.velocity = movement * (playerSpeed * Time.fixedDeltaTime);
+            rb.velocity = movement * (playerSpeed * speedBonus * Time.fixedDeltaTime);
             playerPosition = transform.position;
             PlayerRoomCollider.transform.position = playerPosition;
         }

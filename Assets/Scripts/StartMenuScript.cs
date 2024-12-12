@@ -8,6 +8,7 @@ public class StartMenuScript : MonoBehaviour
 {
 
     private Button b;
+    public string sceneName;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,6 @@ public class StartMenuScript : MonoBehaviour
 
     void StartGame()
     { 
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(sceneName);
     }
 }
