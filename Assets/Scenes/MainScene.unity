@@ -1227,6 +1227,146 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1687104645254942742, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
   m_PrefabInstance: {fileID: 9107154674899462573}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &720016780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 720016781}
+  - component: {fileID: 720016783}
+  - component: {fileID: 720016782}
+  m_Layer: 5
+  m_Name: BlueNoteText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &720016781
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720016780}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2037687604}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1009.9621, y: 288.111}
+  m_SizeDelta: {x: 407.591, y: 500.049}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &720016782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720016780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Log 200:\r\n\r\nAt the science expo, when introducing K.I.T.T.Y the director
+    claimed that the subject is too \u201Cself-aware\u201D for its good, and with
+    the 3 interns found in the lab room, smeared in blood \u201Crelease us\u201D
+    by order of the government, we must neutralize him. I believe with our robot,
+    he will be able to safely, and securely protect K.I.T.T.Y, and no more will have
+    to die by him. I still believe that K.I.T.T.Y will save humanity, and evolve
+    humans to the next stage."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
+  m_sharedMaterial: {fileID: -1944103926693751416, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &720016783
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720016780}
+  m_CullTransparentMesh: 1
 --- !u!1 &800730208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,6 +1501,146 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800730208}
+  m_CullTransparentMesh: 1
+--- !u!1 &840481632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 840481633}
+  - component: {fileID: 840481635}
+  - component: {fileID: 840481634}
+  m_Layer: 5
+  m_Name: GreenNoteText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &840481633
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840481632}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 674810129}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1009.9621, y: 288.111}
+  m_SizeDelta: {x: 407.591, y: 500.049}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &840481634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840481632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Log 100:\r\n\r\nIt has been about a year, and through the serum it has
+    fully grown. I\u2019ve heard rumors amongst the others of the subject: allegedly
+    at night, they can hear crawling in the ceilings, and one claims they saw a 12-foot
+    figure standing outside the lab room. Rest assured, we shall increase security,
+    our other team will be working on a robot that will monitor the subject, and
+    be on watch for any intruders. We must protect K.I.T.T.Y at all costs. He is
+    our hope."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
+  m_sharedMaterial: {fileID: -1944103926693751416, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &840481635
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840481632}
   m_CullTransparentMesh: 1
 --- !u!1 &885276848
 GameObject:
@@ -1769,90 +2049,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059918501}
   m_CullTransparentMesh: 1
---- !u!1 &1074724782
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1074724783}
-  - component: {fileID: 1074724785}
-  - component: {fileID: 1074724784}
-  m_Layer: 5
-  m_Name: RedNoteText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1074724783
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074724782}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1371274908}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1009.962, y: 288.111}
-  m_SizeDelta: {x: 407.591, y: 500.049}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1074724784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074724782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 5268ee3fe162d08488b883d2765da429, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Log 1:\r\n\r\nToday is September 14th, 2024. We\u2019ve just begun our
-    first experiment with the subject \u201CK.I.T.T.Y\u201D and it has taken well
-    to the serums. The installation process of the tubes was tough, but better for
-    a kitten than it being fully grown: it has a chance of survival, unlike the rest.
-    However, at only 3 months old, it has started walking bi-pedal and has learned
-    to babble. We shall continue to monitor."
---- !u!222 &1074724785
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074724782}
-  m_CullTransparentMesh: 1
 --- !u!1 &1099628504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,91 +2402,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1283523385}
   m_SourcePrefab: {fileID: 100100000, guid: 249b052f21ef1c244b88c036efcaadae, type: 3}
---- !u!1 &1194634323
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1194634324}
-  - component: {fileID: 1194634326}
-  - component: {fileID: 1194634325}
-  m_Layer: 5
-  m_Name: BlueNoteText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1194634324
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194634323}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2037687604}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1009.96204, y: 288.11102}
-  m_SizeDelta: {x: 407.591, y: 500.049}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1194634325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194634323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 5268ee3fe162d08488b883d2765da429, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Log 200:\r\n\r\nAt the science expo, when introducing K.I.T.T.Y the director
-    claimed that the subject is too \u201Cself-aware\u201D for its good, and with
-    the 3 interns found in the lab room, smeared in blood \u201Crelease us\u201D
-    by order of the government, we must neutralize him. I believe with our robot,
-    he will be able to safely, and securely protect K.I.T.T.Y, and no more will have
-    to die by him. I still believe that K.I.T.T.Y will save humanity, and evolve
-    humans to the next stage."
---- !u!222 &1194634326
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194634323}
-  m_CullTransparentMesh: 1
 --- !u!1 &1230416788
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,6 +3790,145 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1620714985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1620714986}
+  - component: {fileID: 1620714988}
+  - component: {fileID: 1620714987}
+  m_Layer: 5
+  m_Name: RedNoteText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1620714986
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620714985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1371274908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1009.962, y: 288.111}
+  m_SizeDelta: {x: 407.591, y: 500.049}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1620714987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620714985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Log 1:\r\n\r\nToday is September 14th, 2024. We\u2019ve just begun our
+    first experiment with the subject \u201CK.I.T.T.Y\u201D and it has taken well
+    to the serums. The installation process of the tubes was tough, but better for
+    a kitten than it being fully grown: it has a chance of survival, unlike the rest.
+    However, at only 3 months old, it has started walking bi-pedal and has learned
+    to babble. We shall continue to monitor."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
+  m_sharedMaterial: {fileID: -1944103926693751416, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1620714988
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620714985}
+  m_CullTransparentMesh: 1
 --- !u!1 &1710024255
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,7 +4103,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750688892}
   m_CullTransparentMesh: 1
---- !u!1 &1760142091
+--- !u!1 &1765972327
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3861,45 +4111,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1760142092}
-  - component: {fileID: 1760142094}
-  - component: {fileID: 1760142093}
+  - component: {fileID: 1765972328}
+  - component: {fileID: 1765972330}
+  - component: {fileID: 1765972329}
   m_Layer: 5
-  m_Name: GreenNoteText
+  m_Name: YellowNoteText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1760142092
+--- !u!224 &1765972328
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760142091}
+  m_GameObject: {fileID: 1765972327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 674810129}
+  m_Father: {fileID: 101591988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1009.96204, y: 288.11102}
+  m_AnchoredPosition: {x: -1009.962, y: 288.111}
   m_SizeDelta: {x: 407.591, y: 500.049}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1760142093
+--- !u!114 &1765972329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760142091}
+  m_GameObject: {fileID: 1765972327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -3910,33 +4160,91 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 5268ee3fe162d08488b883d2765da429, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Log 100:\r\n\r\nIt has been about a year, and through the serum it has
-    fully grown. I\u2019ve heard rumors amongst the others of the subject: allegedly
-    at night, they can hear crawling in the ceilings, and one claims they saw a 12-foot
-    figure standing outside the lab room. Rest assured, we shall increase security,
-    our other team will be working on a robot that will monitor the subject, and
-    be on watch for any intruders. We must protect K.I.T.T.Y at all costs. He is
-    our hope."
---- !u!222 &1760142094
+  m_text: "Log 32:\r\n\r\nToday is March 7th, 2025. Subject \u201CK.I.T.T.Y\u201D
+    has become speaking and reading at college level. Its intellect has proven itself
+    tenfold than what we initially thought, and its strength is appalling. It can
+    carry 3,000 lbs easily and is learning boxing from its tutor. We have begun its
+    socialization with humans, and its charisma is well received by the other scientists:
+    it can hold a conversation, and engage thoughtfully. However, as we\u2019ve continued
+    to monitor it, we have noticed it hides sheets of paper under its bed. We have
+    tried to retrieve it, and even put it down to sleep, but, K.I.T.T.Y has always
+    managed to wake itself up or scare the interns away from its bed. This behavior
+    will be carefully monitored."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
+  m_sharedMaterial: {fileID: -1944103926693751416, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1765972330
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760142091}
+  m_GameObject: {fileID: 1765972327}
   m_CullTransparentMesh: 1
 --- !u!1 &1811653389
 GameObject:
@@ -4475,94 +4783,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5676063160549640660, guid: 40eb1a153e92ef547aa30ac765498c05, type: 3}
   m_PrefabInstance: {fileID: 5700661567588810508}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2126661924
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2126661925}
-  - component: {fileID: 2126661927}
-  - component: {fileID: 2126661926}
-  m_Layer: 5
-  m_Name: YellowNoteText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2126661925
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126661924}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 101591988}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1009.96204, y: 288.11102}
-  m_SizeDelta: {x: 407.591, y: 500.049}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2126661926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126661924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 5268ee3fe162d08488b883d2765da429, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Log 32:\r\n\r\nToday is March 7th, 2025. Subject \u201CK.I.T.T.Y\u201D
-    has become speaking and reading at college level. Its intellect has proven itself
-    tenfold than what we initially thought, and its strength is appalling. It can
-    carry 3,000 lbs easily and is learning boxing from its tutor. We have begun its
-    socialization with humans, and its charisma is well received by the other scientists:
-    it can hold a conversation, and engage thoughtfully. However, as we\u2019ve continued
-    to monitor it, we have noticed it hides sheets of paper under its bed. We have
-    tried to retrieve it, and even put it down to sleep, but, K.I.T.T.Y has always
-    managed to wake itself up or scare the interns away from its bed. This behavior
-    will be carefully monitored."
---- !u!222 &2126661927
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126661924}
-  m_CullTransparentMesh: 1
 --- !u!224 &233189018453537874 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8124550781634632343, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
@@ -5003,11 +5223,11 @@ PrefabInstance:
     - target: {fileID: 2267159600446477883, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       propertyPath: noteContent
       value: 
-      objectReference: {fileID: 2126661924}
+      objectReference: {fileID: 1765972327}
     - target: {fileID: 2430203091816502683, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       propertyPath: noteContent
       value: 
-      objectReference: {fileID: 1074724782}
+      objectReference: {fileID: 1620714985}
     - target: {fileID: 2721426588627424682, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       propertyPath: m_SizeDelta.x
       value: 638
@@ -5063,7 +5283,7 @@ PrefabInstance:
     - target: {fileID: 5434196277915434412, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       propertyPath: noteContent
       value: 
-      objectReference: {fileID: 1194634323}
+      objectReference: {fileID: 720016780}
     - target: {fileID: 5528003367141351199, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -5071,7 +5291,7 @@ PrefabInstance:
     - target: {fileID: 6073729153121587597, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       propertyPath: noteContent
       value: 
-      objectReference: {fileID: 1760142091}
+      objectReference: {fileID: 840481632}
     - target: {fileID: 6396083271331794688, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       propertyPath: m_SizeDelta.x
       value: 63
@@ -5229,16 +5449,16 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8378305108919451004, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1074724783}
+      addedObject: {fileID: 1620714986}
     - targetCorrespondingSourceObject: {fileID: 370806486357240521, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2126661925}
+      addedObject: {fileID: 1765972328}
     - targetCorrespondingSourceObject: {fileID: 1687104645254942742, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1760142092}
+      addedObject: {fileID: 840481633}
     - targetCorrespondingSourceObject: {fileID: 8123575275803149226, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1194634324}
+      addedObject: {fileID: 720016781}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4471367442239034181, guid: 99e6f285694750a41b490d32e5624af0, type: 3}
       insertIndex: -1
