@@ -67,5 +67,13 @@ namespace PlayerScript
                 Destroy(gameObject); // Destroy the projectile on impact
             }
         }
+
+        public void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.collider.CompareTag("StaticObject"))
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

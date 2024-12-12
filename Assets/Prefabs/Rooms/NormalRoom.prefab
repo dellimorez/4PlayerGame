@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 872682442539157575}
   m_Layer: 0
   m_Name: newspaper
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 5920450089447683236}
   m_Layer: 0
   m_Name: soda
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

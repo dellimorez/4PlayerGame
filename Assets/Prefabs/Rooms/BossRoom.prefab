@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5430577523114190718}
   m_Layer: 0
   m_Name: processor (1)
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 8056615532535653556}
   m_Layer: 0
   m_Name: processor (3)
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 8782126462362590065}
   m_Layer: 0
   m_Name: skeletonleg
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 8136202695382112807}
   m_Layer: 0
   m_Name: processor (2)
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 4914689828242492698}
   m_Layer: 0
   m_Name: BottomWall1
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 7754955658884384218}
   m_Layer: 0
   m_Name: terminal
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -914,7 +914,7 @@ GameObject:
   - component: {fileID: 7442648426461468117}
   m_Layer: 0
   m_Name: Door2
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1085,7 +1085,7 @@ GameObject:
   - component: {fileID: 3892115801301416743}
   m_Layer: 0
   m_Name: LeftWall2
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1243,7 +1243,7 @@ GameObject:
   - component: {fileID: 2790527815915285201}
   m_Layer: 0
   m_Name: TopWall1
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1401,7 +1401,7 @@ GameObject:
   - component: {fileID: 282220921048628880}
   m_Layer: 0
   m_Name: RightWall1
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1559,7 +1559,7 @@ GameObject:
   - component: {fileID: 4767272538701939188}
   m_Layer: 0
   m_Name: LeftWall1
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1716,7 +1716,7 @@ GameObject:
   - component: {fileID: 3535918449602249374}
   m_Layer: 0
   m_Name: processor
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1978,7 +1978,7 @@ GameObject:
   - component: {fileID: 6862202709672076089}
   m_Layer: 0
   m_Name: Door1
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2233,7 +2233,7 @@ GameObject:
   - component: {fileID: 7085728765185686810}
   m_Layer: 0
   m_Name: TopWall2
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2475,7 +2475,7 @@ GameObject:
   - component: {fileID: 3019820087863546437}
   m_Layer: 0
   m_Name: RightWall2
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2633,7 +2633,7 @@ GameObject:
   - component: {fileID: 218659112059114789}
   m_Layer: 0
   m_Name: BottomWall2
-  m_TagString: Untagged
+  m_TagString: StaticObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
