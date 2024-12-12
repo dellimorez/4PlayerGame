@@ -281,7 +281,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5268ee3fe162d08488b883d2765da429, type: 3}
-    m_FontSize: 24
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -293,12 +293,12 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Transmission coming into Robot S.E.C.U.R.E:\n\nIt\u2019s been about 70
-    years since man\u2019s disappearance\u2026. \n\nThe company V.E.I.L has supplied
-    innovation and technology on Earth for 100 years, and figured out a new way to
-    evolve: through animals. Unfortunately, those subjects have escaped their prisons
-    but not the building. \n\nNever escaping, just thriving\u2026\n\nWhen you\u2019ve
-    awakened from this, your mission is to find a way out of this company. You are
-    the key to survival.\n\nIf you find any evidence of V.E.I.L\u2019s experiments
+    years since man\u2019s disappearance\u2026. \n\nThe company L.U.R.K.E.R that
+    has supplied innovation and technology on Earth for 100 years, and figured out
+    a new way to evolve: through animals. Unfortunately, those subjects have escaped
+    their prisons but not the building. \n\nNever escaping, just thriving\u2026\n\nWhen
+    you\u2019ve awakened from this, your mission is to find a way out of this company.
+    You are the key to survival.\n\nIf you find any evidence of V.E.I.L\u2019s experiments
     when you awaken, keep it. There\u2019s more to them even after the destruction
     of civilization\u2026 You must find a way to end the nightmares of their experiments
     and shut them down for good. \n\nAnd above all else\n\nDon\u2019t let them find
@@ -327,8 +327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1382, y: -804.62427}
-  m_SizeDelta: {x: 1450.7131, y: 495.4617}
+  m_AnchoredPosition: {x: 0.1382, y: -1097.5516}
+  m_SizeDelta: {x: 1450.7131, y: 1081.3165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &413381998
 GameObject:
