@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 4501716323675317940}
   - component: {fileID: 2729562145752910187}
   m_Layer: 0
-  m_Name: plant
+  m_Name: terminal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,7 +187,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.020564094}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8432844253873485419}
@@ -233,7 +233,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 26e1112c71a08ee479fdb01e13ea1926, type: 3}
+  m_Sprite: {fileID: 401084288, guid: 426eede1efd2c7c4e8eb15a6c5ed6f82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -303,18 +303,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000014901161, y: -0.014612734}
+  m_Offset: {x: 0.20984602, y: 0.006372452}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.37, y: 0.23}
+    oldSize: {x: 12.581676, y: 13.629999}
     newSize: {x: 0.37, y: 0.23}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2558166, y: 0.18310317}
+  m_Size: {x: 12.342923, y: 13.907003}
   m_EdgeRadius: 0
 --- !u!1 &1788296305462547000
 GameObject:
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 2872187197203220846}
   - component: {fileID: 5338583146517359293}
   m_Layer: 0
-  m_Name: palm
+  m_Name: processor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,8 +344,8 @@ Transform:
   m_GameObject: {fileID: 1788296305462547000}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.55, y: 4.93, z: -0.020564094}
-  m_LocalScale: {x: 9, y: 9, z: 1}
+  m_LocalPosition: {x: -4.82, y: 5.42, z: -0.020564094}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8432844253873485419}
@@ -391,7 +391,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4f0b6e8eee5603b48a0ded0b1d5a7013, type: 3}
+  m_Sprite: {fileID: -1218603221, guid: 426eede1efd2c7c4e8eb15a6c5ed6f82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -434,18 +434,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026696473, y: 0.016643822}
+  m_Offset: {x: 0.25065994, y: 0.0006465912}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.63, y: 0.55}
+    oldSize: {x: 8.311107, y: 11.44}
     newSize: {x: 0.63, y: 0.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5390876, y: 0.44167364}
+  m_Size: {x: 7.8979015, y: 11.415901}
   m_EdgeRadius: 0
 --- !u!50 &5338583146517359293
 Rigidbody2D:
@@ -1463,7 +1463,7 @@ GameObject:
   - component: {fileID: 4882537989385403751}
   - component: {fileID: 7957722357702335039}
   m_Layer: 0
-  m_Name: palm (3)
+  m_Name: processor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1478,8 +1478,8 @@ Transform:
   m_GameObject: {fileID: 4869085799935884779}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.56, y: -4.9, z: -0.020564094}
-  m_LocalScale: {x: 9, y: 9, z: 1}
+  m_LocalPosition: {x: 4.82, y: -5.51, z: -0.020564094}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8432844253873485419}
@@ -1525,7 +1525,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4f0b6e8eee5603b48a0ded0b1d5a7013, type: 3}
+  m_Sprite: {fileID: -1218603221, guid: 426eede1efd2c7c4e8eb15a6c5ed6f82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1568,18 +1568,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026696473, y: -0.03057541}
+  m_Offset: {x: 0.5386145, y: 0.033412695}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.63, y: 0.55}
+    oldSize: {x: 8.311107, y: 11.44}
     newSize: {x: 0.63, y: 0.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5390876, y: 0.46287426}
+  m_Size: {x: 7.577949, y: 11.597078}
   m_EdgeRadius: 0
 --- !u!50 &7957722357702335039
 Rigidbody2D:
@@ -2351,7 +2351,7 @@ GameObject:
   - component: {fileID: 341414633172022127}
   - component: {fileID: 7627511238315811248}
   m_Layer: 0
-  m_Name: palm (2)
+  m_Name: processor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2366,8 +2366,8 @@ Transform:
   m_GameObject: {fileID: 8390369379444160965}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -4.85, z: -0.020564094}
-  m_LocalScale: {x: 9, y: 9, z: 1}
+  m_LocalPosition: {x: -4.82, y: -5.51, z: -0.020564094}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8432844253873485419}
@@ -2413,7 +2413,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4f0b6e8eee5603b48a0ded0b1d5a7013, type: 3}
+  m_Sprite: {fileID: -1218603221, guid: 426eede1efd2c7c4e8eb15a6c5ed6f82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2456,18 +2456,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026696473, y: -0.036357403}
+  m_Offset: {x: 0.47462368, y: 0.059627056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.63, y: 0.55}
+    oldSize: {x: 8.311107, y: 11.44}
     newSize: {x: 0.63, y: 0.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5390876, y: 0.45131028}
+  m_Size: {x: 7.3859835, y: 11.521523}
   m_EdgeRadius: 0
 --- !u!50 &7627511238315811248
 Rigidbody2D:
@@ -2815,7 +2815,7 @@ GameObject:
   - component: {fileID: 1884599983560716783}
   - component: {fileID: 7079185775268551981}
   m_Layer: 0
-  m_Name: palm (1)
+  m_Name: processor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2830,8 +2830,8 @@ Transform:
   m_GameObject: {fileID: 9143547095396867063}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.54, y: 4.95, z: -0.020564094}
-  m_LocalScale: {x: 9, y: 9, z: 1}
+  m_LocalPosition: {x: 4.82, y: 5.42, z: -0.020564094}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8432844253873485419}
@@ -2877,7 +2877,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4f0b6e8eee5603b48a0ded0b1d5a7013, type: 3}
+  m_Sprite: {fileID: -1218603221, guid: 426eede1efd2c7c4e8eb15a6c5ed6f82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2920,18 +2920,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026696473, y: 0.014716484}
+  m_Offset: {x: 0.05869198, y: 0.06270814}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.63, y: 0.55}
+    oldSize: {x: 8.311107, y: 11.44}
     newSize: {x: 0.63, y: 0.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5390876, y: 0.44552833}
+  m_Size: {x: 8.473804, y: 11.419756}
   m_EdgeRadius: 0
 --- !u!50 &7079185775268551981
 Rigidbody2D:

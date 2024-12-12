@@ -33,6 +33,6 @@ public class NoteUIScript : MonoBehaviour
     public static void obtainedNote(int i)
     {
         staticNoteUIImages[i].gameObject.SetActive(true);
-        staticVisualNoteImages[i].view();
+        staticVisualNoteImages[i].View();
     }
 }

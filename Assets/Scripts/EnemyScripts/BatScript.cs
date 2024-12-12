@@ -8,9 +8,9 @@ namespace EnemyScripts
     {
         public float timeToCircle = 0f;
         public float circleRadius = 10f;
-        public AudioClip wingFlapSound;  // Bat wing flap sound
-        public float flapSoundInterval = 1f;  // Time between wing flap sounds
-        public float flapVolume = 0.5f;  // Volume of the wing flap sound
+        public AudioClip wingFlapSound;
+        public float flapSoundInterval = 1f;
+        public float flapVolume = 0.5f;
 
         private bool chasingPlayer = false;
         private bool circlingPlayer = false;
@@ -19,7 +19,7 @@ namespace EnemyScripts
         private float currentCirclingAngle = 0f;
         private Vector2 desiredPosition;
 
-        private bool isPlayingFlapSound = false; // To prevent multiple coroutines for the flap sound
+        private bool isPlayingFlapSound = false;
 
         public override void Update()
         {
@@ -27,14 +27,13 @@ namespace EnemyScripts
             float distanceToDesiredPosition = Vector2.Distance(transform.position, desiredPosition);
 
             if (distanceToDesiredPosition <= 1f || (!chasingPlayer && !circlingPlayer && !batDiving)
-                                               || (chasingPlayer && distanceToDesiredPosition <= circleRadius))
+                || (chasingPlayer && distanceToDesiredPosition <= circleRadius))
             {
                 if (batDiving && distanceToDesiredPosition <= 1f)
                 {
                     batDiving = false;
                 }
 
-                // Get Diving position
                 if (circlingPlayer && Time.time > startTimeCircling + timeToCircle && !batDiving)
                 {
                     batDiving = true;
@@ -43,15 +42,12 @@ namespace EnemyScripts
                         playerPosition.x - transform.position.x);
                     float r = circleRadius;
 
-                    // Convert to Cartesian
                     float x = r * Mathf.Cos(angle);
                     float y = r * Mathf.Sin(angle);
                     desiredPosition = playerPosition + new Vector2(x, y);
                 }
-
-                // Get circling position
                 else if (((chasingPlayer && distanceToDesiredPosition <= circleRadius) ||
-                           (circlingPlayer && distanceToDesiredPosition <= 1f)) && !batDiving)
+                         (circlingPlayer && distanceToDesiredPosition <= 1f)) && !batDiving)
                 {
                     if (chasingPlayer)
                     {
@@ -77,17 +73,19 @@ namespace EnemyScripts
                 }
             }
 
-            if (chasingPlayer) { desiredPosition = playerPosition; }
+            if (chasingPlayer)
+            {
+                desiredPosition = playerPosition;
+            }
 
             float angleDiff = Mathf.Atan2(desiredPosition.y - transform.position.y,
                 desiredPosition.x - transform.position.x);
             movement = new Vector2(Mathf.Cos(angleDiff), Mathf.Sin(angleDiff));
             movement.Normalize();
 
-            // Start playing the wing flap sound when the bat starts moving
             if (!isPlayingFlapSound && (chasingPlayer || circlingPlayer || batDiving))
             {
-                StartCoroutine(PlayWingFlapSound()); // Start the wing flap sound coroutine
+                StartCoroutine(PlayWingFlapSound());
             }
         }
 
@@ -102,21 +100,19 @@ namespace EnemyScripts
             rb.velocity = movement * speed * speedModifier * Time.deltaTime;
         }
 
-        // Coroutine to play the wing flap sound at intervals
         private IEnumerator PlayWingFlapSound()
         {
             isPlayingFlapSound = true;
 
-            while (chasingPlayer || circlingPlayer || batDiving)  // Keep playing the sound while the bat is active
+            while (chasingPlayer || circlingPlayer || batDiving)
             {
                 if (wingFlapSound != null)
                 {
-                    SoundManager.instance.PlaySound(wingFlapSound, flapVolume); // Adjusted to play with custom volume
+                    SoundManager.instance.PlaySound(wingFlapSound, flapVolume);
                 }
-                yield return new WaitForSeconds(flapSoundInterval);  // Wait for the interval before playing again
+                yield return new WaitForSeconds(flapSoundInterval);
             }
 
-            // Stop playing sound when bat stops moving
             isPlayingFlapSound = false;
         }
     }

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf640ca9544ce24982c8e6f751a5241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 125
   health: 15
   strength: 2
   maxEnemyCount: 1
@@ -109,6 +109,8 @@ MonoBehaviour:
   flashColor: {r: 1, g: 0, b: 0, a: 1}
   flashDuration: 0.1
   EnemyProjectile: {fileID: 653912420368166158, guid: 5ad1b4e21db047a44bcf288b982ef46a, type: 3}
+  meleeDamage: 2
+  attackCooldown: 2
   minTimeToShoot: 3
   maxTimeToShoot: 6
 --- !u!50 &8250579329223590016
