@@ -1,10 +1,10 @@
 L.U.R.K.E.R - Fall 2024
 L.U.R.K.E.R is about a robot who has to find all the notes in order to save the human race.
 
-Authors
-Zach Dellimore
-Kaela Botts
-Rat Walker
+Authors:
+Zach Dellimore,
+Kaela Botts,
+Rat Walker,
 Richard Elliot
 
 
