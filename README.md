@@ -1,13 +1,16 @@
 L.U.R.K.E.R - Fall 2024
 L.U.R.K.E.R is about a robot who has to find all the notes in order to save the human race.
 
-Authors
-Zach Dellimore
-Kaela Botts
-Rat Walker
+Authors:
+Zach Dellimore,
+Kaela Botts,
+Rat Walker,
 Richard Elliot
-Game Description
-In this game, the player reads the letters scattered around the house for clues, in order to find the key to escape the house. This game is inspired by rpgmaker games, in which it's a 48 bit pixel style horror game.
+
+
+Game Description:
+
+In L.U.R.K.E.R, you play as the robot S.E.C.U.R.E, who has woken up from a transmission, informing you that all humans have disappeared. As you roam the corporation you find mutant creatures, and learn the horrific horror of this company. Find your way out and at all cost, avoid K.I.T.T.Y..
 
 Important Links
 
@@ -18,6 +21,8 @@ Gameplay Video URL: < https://drive.google.com/file/d/1_HV8MjJX_wLm-VbXXCODIesrm
 Design Doc: < https://docs.google.com/presentation/d/1VlixH86B0g3U2OeZn8y-Ke0juXJZt3K96-vAX8eHq5M/edit?usp=sharing >
 
 Asset List: < https://docs.google.com/spreadsheets/d/1N2HhQp5Rz5RywajRDIJnm1XXLkaesZwHmcKgUTagZOE/edit?gid=1444431360#gid=1444431360 >
+
+link to itch.io <>
 
 Files in the repository
 ./unity/ - this folder contains the Unity game files associated with this game.
