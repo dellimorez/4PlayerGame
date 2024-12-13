@@ -22,7 +22,7 @@ Design Doc: < https://docs.google.com/presentation/d/1VlixH86B0g3U2OeZn8y-Ke0juX
 
 Asset List: < https://docs.google.com/spreadsheets/d/1N2HhQp5Rz5RywajRDIJnm1XXLkaesZwHmcKgUTagZOE/edit?gid=1444431360#gid=1444431360 >
 
-link to itch.io <>
+link to itch.io <https://heyofriendlybee.itch.io/lurker>
 
 Files in the repository
 ./unity/ - this folder contains the Unity game files associated with this game.
