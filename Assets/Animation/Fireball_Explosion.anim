@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lizzard_moves_Animation
+  m_Name: Fireball_Explosion
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,19 +21,19 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1883568696, guid: e97bca55dfd205141bb01a4c2c6c3c29, type: 3}
-    - time: 0.083333336
-      value: {fileID: 250002138, guid: e97bca55dfd205141bb01a4c2c6c3c29, type: 3}
+      value: {fileID: 355045459, guid: bd1330fadaa0bcc4fb624875b44fafb5, type: 3}
     - time: 0.16666667
-      value: {fileID: -1700626692, guid: e97bca55dfd205141bb01a4c2c6c3c29, type: 3}
-    - time: 0.25
-      value: {fileID: 986284989, guid: e97bca55dfd205141bb01a4c2c6c3c29, type: 3}
+      value: {fileID: 1356837723, guid: bd1330fadaa0bcc4fb624875b44fafb5, type: 3}
+    - time: 0.33333334
+      value: {fileID: 846248054, guid: bd1330fadaa0bcc4fb624875b44fafb5, type: 3}
+    - time: 0.5
+      value: {fileID: 0}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 12
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -50,16 +50,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1883568696, guid: e97bca55dfd205141bb01a4c2c6c3c29, type: 3}
-    - {fileID: 250002138, guid: e97bca55dfd205141bb01a4c2c6c3c29, type: 3}
-    - {fileID: -1700626692, guid: e97bca55dfd205141bb01a4c2c6c3c29, type: 3}
-    - {fileID: 986284989, guid: e97bca55dfd205141bb01a4c2c6c3c29, type: 3}
+    - {fileID: 355045459, guid: bd1330fadaa0bcc4fb624875b44fafb5, type: 3}
+    - {fileID: 1356837723, guid: bd1330fadaa0bcc4fb624875b44fafb5, type: 3}
+    - {fileID: 846248054, guid: bd1330fadaa0bcc4fb624875b44fafb5, type: 3}
+    - {fileID: 0}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.33333334
+    m_StopTime: 0.51666665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

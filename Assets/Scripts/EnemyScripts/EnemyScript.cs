@@ -27,6 +27,8 @@ public class EnemyScript : MonoBehaviour
 
     public virtual void Update()
     {
+        if (CutsceneManager.staticTimeline.state == UnityEngine.Playables.PlayState.Playing) return;  // Prevent movement during cutscene
+
         Vector2 playerPosition = PlayerController.playerPosition;
         float angleDiff = Mathf.Atan2(playerPosition.y - transform.position.y,
             playerPosition.x - transform.position.x);
@@ -37,6 +39,11 @@ public class EnemyScript : MonoBehaviour
 
     public virtual void FixedUpdate()
     {
+        if (CutsceneManager.staticTimeline.state == UnityEngine.Playables.PlayState.Playing)
+        {
+            rb.velocity = Vector2.zero;  // Stop movement during cutscene
+            return;
+        }
         rb.velocity = movement * speed * Time.deltaTime;
     }
 
@@ -77,7 +84,7 @@ public class EnemyScript : MonoBehaviour
     // If enemy is able to be phased through
     virtual public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (!GameManager.cutsceneActive && collision.gameObject.CompareTag("Player"))
         {
             Health playerHealth = collision.GetComponent<Health>();
             if (playerHealth != null)
@@ -90,11 +97,12 @@ public class EnemyScript : MonoBehaviour
     // If enemy is solid
     virtual public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (!GameManager.cutsceneActive && collision.gameObject.CompareTag("Player"))
         {
             Health playerHealth = collision.gameObject.GetComponent<Health>();
             if (playerHealth != null)
             {
+                animator.SetTrigger("attack");
                 playerHealth.TakeDamage(strength);
             }
         }

@@ -5,11 +5,16 @@ public class NoteUIVisualScript : MonoBehaviour
     public GameObject noteUI;
     public GameObject noteText;
     public GameObject noteContent;
+    public GameObject Logs;
+    public GameObject LogsNumber;
+
 
     private void Start()
     {
         noteText.SetActive(false);
         noteContent.SetActive(false);
+        LogsNumber.SetActive(false);
+        Logs.SetActive(false);
     }
 
     private void Update()
@@ -25,6 +30,8 @@ public class NoteUIVisualScript : MonoBehaviour
         noteUI.SetActive(true);
         noteText.SetActive(true);
         noteContent.SetActive(true);
+        LogsNumber.SetActive(true);
+        Logs.SetActive(true);
         Time.timeScale = 0f;
     }
 
@@ -33,6 +40,8 @@ public class NoteUIVisualScript : MonoBehaviour
         noteUI.SetActive(false);
         noteText.SetActive(false);
         noteContent.SetActive(false);
+        LogsNumber.SetActive(false);
+        Logs.SetActive(false);
         Time.timeScale = 1f;
     }
 }

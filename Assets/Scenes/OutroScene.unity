@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 349780052}
   - component: {fileID: 349780054}
   m_Layer: 0
-  m_Name: IntroText
+  m_Name: OutroText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,8 +254,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1382, y: -1062}
-  m_SizeDelta: {x: 1450.713, y: 1081.317}
+  m_AnchoredPosition: {x: 0.1382, y: -1787.5972}
+  m_SizeDelta: {x: 1450.713, y: 2461.407}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349780052
 MonoBehaviour:
@@ -277,17 +277,28 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Transmission coming into Robot S.E.C.U.R.E:\n\nIt\u2019s been about 70
-    years since man\u2019s disappearance\u2026. \n\nThe company L.U.R.K.E.R that
-    has supplied innovation and technology on Earth for 100 years, and figured out
-    a new way to evolve: through animals. Unfortunately, those subjects have escaped
-    their prisons but not the building. \n\nNever escaping, just thriving\u2026\n\nWhen
-    you\u2019ve awakened from this, your mission is to find a way out of this company.
-    You are the key to survival.\n\nIf you find any evidence of V.E.I.L\u2019s experiments
-    when you awaken, keep it. There\u2019s more to them even after the destruction
-    of civilization\u2026 You must find a way to end the nightmares of their experiments
-    and shut them down for good. \n\nAnd above all else\n\nDon\u2019t let them find
-    you"
+  m_text: "After defeating K.I.T.T.Y., you unlock the door only to find the remainder
+    of humanity. \r\n\r\nResiding in the cell chambers, once harboring the animals
+    you defeated on your journey... \r\n\r\nWalking out the front doors, emerging
+    from the cold, vicious establishment you were just in.\r\n\r\nYou pause\u2026\r\n\r\nSeeing
+    the sun after all the bloodshed. No more bloodstained walls, and creepy animals.
+    The horrors replaced by more, desolate and destroyed buildings. The remainder
+    of humanity\u2019s destruction lays before you. \r\n\r\nYou hope this time, humanity
+    will learn and history won\u2019t repeat itself.\r\n\r\nOr will it?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreated
+    By: Elite Gamers\n\n\nZach Dellimore - Programmer\r\n\r\nEnvironment Programmer\r\nUI/UX
+    Designer\r\n\n\nRichard Elliott - Programmer\r\n\r\nCharacter Programmer\r\nUI/UX
+    Designer\r\n\n\n\u200BRC Taylor - Illustrator\r\n\r\nBackground Artist\r\nCharacter
+    Artist\r\nUI Artist\r\n\r\n\r\n\u200BKaela Botts - Creative Director and Illustrator\r\n\r\n\u200BGame
+    Writer\r\nCharacter Artist\r\nUI Artist\r\n\u200B\n\nAniyah Ricks - Sound Technician\r\n\r\n\u200BIntro
+    and Outro Artist\n\n\n\u200BCopyright\u200B\n\nFont:\n\n1001 Font: \u200BMokot
+    Font\u200B\n\nBy:  Drizy Studio\nTypeface Division\nLicense type: \u200B1001
+    Font \n\u200B\u200BMusic:\n\n\u200BFreesound: Hurt Sound\u200B\n\nBy: mobeyee\nLicense
+    Type: CC0 (No copyright)\n\u200BFreesound: Power Up\u200B\n\nBy: Duskbreaker\nLicense
+    Type: CC0 (No copyright)\n\u200BFreesound: Attack Sound\u200B\n\nBy: jalastram\nLicense
+    Type: CC0 (No copyright)\n\u200BFreesound: Bat Sound\u200B\n\nBy: Autistic Lucario\nLicense
+    Type: CC0 (No copyright)\n\u200BFreesound: Lizard Fireball Sound\u200B\n\nBy:
+    qubodup\u200B\n\u200BFreesound: Boss Tiger Sound\u200B\n\nBy: Aegersum\u200B\u200B\nLicense
+    Type: CC0 (No copyright)\n\n\nThanks for playing!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
   m_sharedMaterial: {fileID: -1944103926693751416, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
@@ -350,7 +361,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -2305.4622}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -414,8 +425,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b640ef8bda6cd364bbb71dad3c76e4d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTime: 70
-  sceneName: MainScene
+  changeTime: 88
+  sceneName: StartScene
 --- !u!4 &413382000
 Transform:
   m_ObjectHideFlags: 0
@@ -554,7 +565,7 @@ PlayableDirector:
   m_GameObject: {fileID: 528360283}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 869e6db230bc67b43aac04acf7911b57, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 7c65099d91b6df14199cb3557b02d0f8, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -617,7 +628,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ebe1b2d27ac617a40b5ad64eb5331de4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 53c8d5cbc27f23e4eaee918da4cc56c4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

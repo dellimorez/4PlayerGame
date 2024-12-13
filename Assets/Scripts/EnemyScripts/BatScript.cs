@@ -23,6 +23,8 @@ namespace EnemyScripts
 
         public override void Update()
         {
+            if (CutsceneManager.staticTimeline.state == UnityEngine.Playables.PlayState.Playing) return;
+
             Vector2 playerPosition = PlayerController.playerPosition;
             float distanceToDesiredPosition = Vector2.Distance(transform.position, desiredPosition);
 
@@ -91,6 +93,8 @@ namespace EnemyScripts
 
         public override void FixedUpdate()
         {
+            if (CutsceneManager.staticTimeline.state == UnityEngine.Playables.PlayState.Playing) return;
+
             float speedModifier = 1f;
             if (batDiving || circlingPlayer)
             {

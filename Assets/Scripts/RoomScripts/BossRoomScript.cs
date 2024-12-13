@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class BossRoomScript : RoomScript
 {
+    public GameObject cutsceneTrigger;  // Field for the cutscene trigger object
+
     // Start is called before the first frame update
     override protected void Start()
     {
@@ -45,6 +47,7 @@ public class BossRoomScript : RoomScript
             visited = true;
             MapScript.NewRoomVisited(pos, roomType);
         }
+
         MapScript.roomDictionary[PlayerController.currentRoom].GetComponent<Image>().color = inactiveRoomColor;
         MapScript.roomDictionary[pos].GetComponent<Image>().color = activeRoomColor;
         PlayerController.currentRoom = pos;
@@ -53,5 +56,7 @@ public class BossRoomScript : RoomScript
         {
             LockRoom();
         }
+
+        CutsceneManager.StartCutscene();
     }
 }

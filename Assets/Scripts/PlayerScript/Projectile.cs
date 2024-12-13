@@ -7,16 +7,25 @@ namespace PlayerScript
         [SerializeField] private float speed = 5f; // Speed at which the projectile moves
         private Vector2 direction; // Direction the projectile will move in
         private Vector3 defaultScale = new Vector3(0.15f, 0.15f, 0.15f); // Uniform scale
+        private Animator anim;
+        private bool hasExploded = false;  // Prevents multiple explosions
 
         private void Start()
         {
+            anim = GetComponent<Animator>();
             AdjustProjectileOrientation();
         }
 
         virtual public void FixedUpdate()
         {
+            if (hasExploded) return;
+
             // Ensure the projectile moves properly in its set direction
             transform.position += (Vector3)direction * speed * Time.deltaTime;
+
+            float directionFacing = direction.x < 0 ? -1f : 1f;
+
+            transform.localScale = new Vector3(directionFacing * defaultScale.x, defaultScale.y, defaultScale.z); // Flip X
 
             // Destroy the projectile after 5 seconds
             Destroy(gameObject, 5f);
@@ -56,7 +65,9 @@ namespace PlayerScript
 
         virtual public void OnTriggerEnter2D(Collider2D collision)
         {
-            // Check if the projectile collides with an object tagged as "Enemy"
+            if (hasExploded) return;
+
+            // Trigger explosion if projectile hits an enemy
             if (collision.CompareTag("Enemy"))
             {
                 EnemyScript enemy = collision.GetComponent<EnemyScript>();
@@ -64,16 +75,32 @@ namespace PlayerScript
                 {
                     enemy.TakeDamage(1); // Apply damage
                 }
-                Destroy(gameObject); // Destroy the projectile on impact
+                TriggerExplosion();
+            }
+            else if (collision.CompareTag("StaticObject"))
+            {
+                TriggerExplosion();
             }
         }
 
         public void OnCollisionEnter2D(Collision2D collision)
         {
+            if (hasExploded) return;
+
             if (collision.collider.CompareTag("StaticObject"))
             {
-                Destroy(gameObject);
+                TriggerExplosion();
             }
+        }
+
+        private void TriggerExplosion()
+        {
+            if (anim != null)
+            {
+                anim.SetTrigger("explode");
+            }
+            hasExploded = true;
+            Destroy(gameObject, 0.5f);  // Allow time for explosion animation
         }
     }
 }

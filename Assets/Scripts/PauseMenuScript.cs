@@ -32,6 +32,8 @@ public class PauseMenuScript : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.Escape))
         {
+            if (!isPaused && Time.timeScale == 0f) { return; }
+
             isPaused = !isPaused;
             if (isPaused)
             {

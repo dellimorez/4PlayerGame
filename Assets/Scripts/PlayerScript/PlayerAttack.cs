@@ -10,6 +10,7 @@ namespace PlayerScript
         [SerializeField] private float attackCooldown = 0.5f; // Cooldown for attacks
         [SerializeField] private Animator anim; // Reference to the Animator component
         [SerializeField] private AudioClip attackClip; // The sound clip for attack
+        [SerializeField] private float attackClipVolume; // The sound clip volume
 
         private float lastAttackTime = 0f; // Time of the last attack
         private Vector3 originalScale; // Store the original scale of the player
@@ -88,7 +89,7 @@ namespace PlayerScript
             // Play the attack sound using the SoundManager
             if (attackClip != null)
             {
-                SoundManager.instance.PlaySound(attackClip, 1.0f); // 1.0f is full volume
+                SoundManager.instance.PlaySound(attackClip, attackClipVolume); // 1.0f is full volume
             }
         }
 

@@ -10,6 +10,7 @@ public class BossEnemyScript : EnemyScript
     public float attackCooldown = 2f; // Cooldown between attacks
     public int minTimeToShoot = 3;
     public int maxTimeToShoot = 6;
+    private Vector3 originalScale; // Store the original scale
 
     private bool canAttack = true;    // Tracks if the boss can attack
     private float timeSinceLastShot;
@@ -20,6 +21,7 @@ public class BossEnemyScript : EnemyScript
 
         timeToShootNext = Random.Range(minTimeToShoot, maxTimeToShoot + 1);
         timeSinceLastShot = Time.time;
+        originalScale = transform.localScale; // Save the original scale at the start
     }
 
     public override void Update()
@@ -32,6 +34,17 @@ public class BossEnemyScript : EnemyScript
             timeToShootNext = Random.Range(minTimeToShoot, maxTimeToShoot + 1);
             timeSinceLastShot = Time.time;
         }
+
+        // Flip Boss sprite based on movement direction
+        if (movement.x < 0) // Moving left
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+        }
+        else if (movement.x > 0) // Moving right
+        {
+            transform.localScale = new Vector3(Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+        }
+
     }
 
     private void Shoot()

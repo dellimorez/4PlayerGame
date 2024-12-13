@@ -19,6 +19,10 @@ public class RoomScript : MonoBehaviour
     public GameObject rightDoor;
     public GameObject topDoor;
     public GameObject bottomDoor;
+    public GameObject leftWallBlock;
+    public GameObject rightWallBlock;
+    public GameObject topWallBlock;
+    public GameObject bottomWallBlock;
     public GameObject leftWall1;
     public GameObject leftWall2;
     public GameObject rightWall1;
@@ -35,34 +39,10 @@ public class RoomScript : MonoBehaviour
     // Start is called before the first frame update
     virtual protected void Start()
     {
-        if (!roomToLeft)
-        {
-            leftWall1.transform.localScale = new Vector3(1, 15, 0);
-            Vector3 newPosition = leftWall1.transform.localPosition;
-            newPosition.y = 0;
-            leftWall1.transform.localPosition = newPosition;
-        }
-        if (!roomToRight)
-        {
-            rightWall1.transform.localScale = new Vector3(1, 15, 0);
-            Vector3 newPosition = rightWall1.transform.localPosition;
-            newPosition.y = 0;
-            rightWall1.transform.localPosition = newPosition;
-        }
-        if (!roomToTop)
-        {
-            topWall1.transform.localScale = new Vector3(1, 17, 0);
-            Vector3 newPosition = topWall1.transform.localPosition;
-            newPosition.x = 0;
-            topWall1.transform.localPosition = newPosition;
-        }
-        if (!roomToBottom)
-        {
-            bottomWall1.transform.localScale = new Vector3(1, 17, 0);
-            Vector3 newPosition = bottomWall1.transform.localPosition;
-            newPosition.x = 0;
-            bottomWall1.transform.localPosition = newPosition;
-        }
+        if (leftWallBlock) leftWallBlock.SetActive(!roomToLeft);
+        if (rightWallBlock) rightWallBlock.SetActive(!roomToRight);
+        if (topWallBlock) topWallBlock.SetActive(!roomToTop);
+        if (bottomWallBlock) bottomWallBlock.SetActive(!roomToBottom);
 
         leftDoor.SetActive(false);
         rightDoor.SetActive(false);
