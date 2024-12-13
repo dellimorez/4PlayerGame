@@ -6,8 +6,9 @@ Zach Dellimore
 Kaela Botts
 Rat Walker
 Richard Elliot
-Game Description
 
+
+Game Description:
 
 In L.U.R.K.E.R, you play as the robot S.E.C.U.R.E, who has woken up from a transmission, informing you that all humans have disappeared. As you roam the corporation you find mutant creatures, and learn the horrific horror of this company. Find your way out and at all cost, avoid K.I.T.T.Y..
 
