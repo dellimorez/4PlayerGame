@@ -290,15 +290,15 @@ MonoBehaviour:
     Designer\r\n\n\n\u200BRC Taylor - Illustrator\r\n\r\nBackground Artist\r\nCharacter
     Artist\r\nUI Artist\r\n\r\n\r\n\u200BKaela Botts - Creative Director and Illustrator\r\n\r\n\u200BGame
     Writer\r\nCharacter Artist\r\nUI Artist\r\n\u200B\n\nAniyah Ricks - Sound Technician\r\n\r\n\u200BIntro
-    and Outro Artist\n\n\n\u200BCopyright\u200B\n\nFont:\n\n1001 Font: \u200BMokot
-    Font\u200B\n\nBy:  Drizy Studio\nTypeface Division\nLicense type: \u200B1001
-    Font \n\u200B\u200BMusic:\n\n\u200BFreesound: Hurt Sound\u200B\n\nBy: mobeyee\nLicense
-    Type: CC0 (No copyright)\n\u200BFreesound: Power Up\u200B\n\nBy: Duskbreaker\nLicense
-    Type: CC0 (No copyright)\n\u200BFreesound: Attack Sound\u200B\n\nBy: jalastram\nLicense
-    Type: CC0 (No copyright)\n\u200BFreesound: Bat Sound\u200B\n\nBy: Autistic Lucario\nLicense
-    Type: CC0 (No copyright)\n\u200BFreesound: Lizard Fireball Sound\u200B\n\nBy:
-    qubodup\u200B\n\u200BFreesound: Boss Tiger Sound\u200B\n\nBy: Aegersum\u200B\u200B\nLicense
-    Type: CC0 (No copyright)\n\n\nThanks for playing!"
+    and Outro Artist\n\nTrailer Edited by Ayden Lawman\n\n\n\u200BCopyright\u200B\n\nFont:\n\n1001
+    Font: \u200BMokot Font\u200B\n\nBy:  Drizy Studio\nTypeface Division\nLicense
+    type: \u200B1001 Font \n\u200B\u200BMusic:\n\n\u200BFreesound: Hurt Sound\u200B\n\nBy:
+    mobeyee\nLicense Type: CC0 (No copyright)\n\u200BFreesound: Power Up\u200B\n\nBy:
+    Duskbreaker\nLicense Type: CC0 (No copyright)\n\u200BFreesound: Attack Sound\u200B\n\nBy:
+    jalastram\nLicense Type: CC0 (No copyright)\n\u200BFreesound: Bat Sound\u200B\n\nBy:
+    Autistic Lucario\nLicense Type: CC0 (No copyright)\n\u200BFreesound: Lizard Fireball
+    Sound\u200B\n\nBy: qubodup\u200B\n\u200BFreesound: Boss Tiger Sound\u200B\n\nBy:
+    Aegersum\u200B\u200B\nLicense Type: CC0 (No copyright)\n\n\nThanks for playing!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
   m_sharedMaterial: {fileID: -1944103926693751416, guid: 4731c56b1f5f80b45bc1c4b3688e5968, type: 2}
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -2305.4622}
+  m_margin: {x: 0, y: 0, z: 0, w: -2367.228}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 88
-  sceneName: StartScene
+  sceneName: WinScene
 --- !u!4 &413382000
 Transform:
   m_ObjectHideFlags: 0
@@ -583,6 +583,18 @@ PlayableDirector:
     value: {fileID: 349780054}
   - key: {fileID: -6948343445927765257, guid: 869e6db230bc67b43aac04acf7911b57, type: 2}
     value: {fileID: 349780054}
+  - key: {fileID: 287811222850252491, guid: 7c65099d91b6df14199cb3557b02d0f8, type: 2}
+    value: {fileID: 349780054}
+  - key: {fileID: -6948343445927765257, guid: 7c65099d91b6df14199cb3557b02d0f8, type: 2}
+    value: {fileID: 349780054}
+  - key: {fileID: 5612749220367325467, guid: 7c65099d91b6df14199cb3557b02d0f8, type: 2}
+    value: {fileID: 1459803239}
+  - key: {fileID: 7358286631575147805, guid: 7c65099d91b6df14199cb3557b02d0f8, type: 2}
+    value: {fileID: 454538076}
+  - key: {fileID: 4522072955167698715, guid: 7c65099d91b6df14199cb3557b02d0f8, type: 2}
+    value: {fileID: 1841872129}
+  - key: {fileID: 5713801607192984403, guid: 7c65099d91b6df14199cb3557b02d0f8, type: 2}
+    value: {fileID: 131036686}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &528360285
@@ -945,6 +957,7 @@ GameObject:
   - component: {fileID: 1404258793}
   - component: {fileID: 1404258795}
   - component: {fileID: 1404258794}
+  - component: {fileID: 1404258796}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -1009,6 +1022,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404258792}
   m_CullTransparentMesh: 1
+--- !u!95 &1404258796
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404258792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1459803235
 GameObject:
   m_ObjectHideFlags: 0

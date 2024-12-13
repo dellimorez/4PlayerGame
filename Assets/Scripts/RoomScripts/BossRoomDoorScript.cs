@@ -23,7 +23,7 @@ public class BossRoomDoorScript : MonoBehaviour
 
             if(finalDoor)
             {
-                SceneManager.LoadScene("WinScene");
+                SceneManager.LoadScene("OutroScene");
             }
         }
     }
